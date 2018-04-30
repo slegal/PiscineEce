@@ -19,7 +19,7 @@
 <ul>
  <li><a href="#">Accueil</a></li>
   <li><a href="#">Vous</a></li>
-<li><a href="#">Mon réseau</a></li>
+<li><a href="#">Mon reseau</a></li>
   <li><a href="#">Mes notifications</a></li>
   <li><a href="#">Emplois</a></li>
  </ul> 
