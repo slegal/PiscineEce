@@ -6,9 +6,10 @@ nav ul
 
 nav li
 {
-	margin-top:30px;
+	margin-top:35px;
 
- margin-left:20px;
+ margin-left:65px;
+ margin-bottom:40px;
  float:left; /*pour IE*/
  
 }
@@ -17,26 +18,172 @@ nav a
 {
 	 text-align:center;
     font-size: 1.3em;
-    color: #181618;
-    padding-bottom: 6px;
-	padding-top: 6px;
+    color: white;
+    padding-bottom: 8px;
+	padding-top: 8px;
+	
     text-decoration: none;
 	border: 2px solid black;
-    padding-right: 20px;
-	 padding-left: 20px;
+    padding-right: 25px;
+	 padding-left: 25px;
     background-color: rgb(0, 113, 121);
+	opacity: 1;
 }
 
 nav{
-	margin-top: 40px;
+	margin-top: 15px;
 }
 
 .logo
 {
 	float: left;
+	margin-left:30px;
+		border: 2px solid black;
 }
 .navigation{
-	margin-bottom:10px;
+	margin-bottom:5px;
 }
 
+.tete{
+	padding-bottom:115px;
+	background-color: rgb(3, 160, 160,0.5);
+	border: 2px solid black;
+	
+}
 
+.contenu{
+	
+	margin-top:10px;
+	background-color: rgb(3, 160, 160,0.5);
+	border: 2px solid black;
+	padding-bottom:30px;
+}
+
+h1{
+text-align:center;
+	   background-color: rgb(0, 113, 121);
+	    padding-bottom: 8px;
+	padding-top: 8px;
+	
+    text-decoration: none;
+	border: 2px solid black;
+    padding-right: 2px;
+	 padding-left: 2px;
+	
+margin-top:20px;
+ margin-left:520px;
+ margin-right:520px;
+ color:white;
+}
+
+.introduction{
+	
+text-align:center;
+	   background-color: rgb(0, 113, 121);
+	    padding-bottom: 0px;
+	padding-top: 0px;
+	
+    text-decoration: none;
+	border: 2px solid black;
+    padding-right: 2px;
+	 padding-left: 2px;
+
+margin-top:5px;
+ margin-left:100px;
+ margin-right:100px;
+
+}
+
+.description{
+	
+text-align:center;
+	   background-color: rgb(0, 113, 121);
+	    padding-bottom: 3px;
+	padding-top: 3px;
+	
+    text-decoration: none;
+	border: 2px solid black;
+    padding-right: 2px;
+	 padding-left: 2px;
+
+margin-top:20px;
+margin-bottom:20px;
+ margin-right:200px;
+ float: right;
+
+
+}
+.photo_profil{
+	
+text-align:center;
+	   background-color: rgb(0, 113, 121);
+	
+    text-decoration: none;
+	border: 2px solid black;
+    padding-right: 2px;
+	 padding-left: 2px;
+
+margin-top:20px;
+margin-bottom:20px;
+ margin-left:200px;
+ float: left;
+
+
+}
+.experiences{
+	
+text-align:center;
+	   background-color: rgb(0, 113, 121);
+
+	
+    text-decoration: none;
+	border: 2px solid black;
+
+
+margin-top:100px;
+ margin-left:200px;
+ margin-right:200px;
+
+}
+.competences{
+	
+text-align:center;
+	   background-color: rgb(0, 113, 121);
+
+	
+	
+    text-decoration: none;
+	border: 2px solid black;
+
+margin-top:20px;
+ margin-left:200px;
+ margin-right:200px;
+
+}
+
+.formation{
+	
+text-align:center;
+	   background-color: rgb(0, 113, 121);
+
+	
+	
+    text-decoration: none;
+	border: 2px solid black;
+   
+
+
+margin-top:20px;
+ margin-left:200px;
+ margin-right:200px;
+
+}
+h2{
+	color:white;
+	
+	background-color: rgb(90, 230, 230,0.5);
+	
+
+ border: 1px solid black;
+ 
+}

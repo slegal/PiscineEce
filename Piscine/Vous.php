@@ -2,7 +2,7 @@
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Accueil</title>
+<title>VOUS</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="designaccueil.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="fichier.js"></script>
@@ -30,7 +30,7 @@
 </div>
 <div class="contenu">
 	 
-	 <h1> FIL D'ACTUALITE</h1>
+	 <h1> VOUS</h1>
 	 
 	 
 	  <div class="introduction">

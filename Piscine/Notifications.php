@@ -30,7 +30,7 @@
 </div>
 <div class="contenu">
 	 
-	 <h1> FIL D'ACTUALITE</h1>
+	 <h1> MES NOTIFICATIONS</h1>
 	 
 	 
 	  <div class="introduction">
