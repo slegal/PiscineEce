@@ -38,7 +38,12 @@
 	 <p> Bienvenu sur votre fil d'actualité, vous pouvez voir les dernières nouvelles de vos amis et de vos contacts professionels</p>
 	 </div>
 	
-	
+	<div class="publier">
+	<h2> Vous souhaitez publier quelque chose? </h2>
+	 <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+	</div>
 	 
 	   <div class="publication">
 	 <h2> <?php echo"NOM, PRENOM a publié un TYPE DE PUBLICATION. Se situe à ENDROIT à DDATE à HEURE et se sent EMOTIONS"?></h2>

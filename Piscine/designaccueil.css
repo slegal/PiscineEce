@@ -302,7 +302,7 @@ margin-top:10px;
     text-decoration: none;
 	border: 2px solid black;
 width:925px;
-height: 100px;
+height: 300px;
 
 margin-top:25px;
  margin-left:200px;
@@ -336,7 +336,21 @@ height: 300px;
  margin-right:100px;
  float: right;
 }
-
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+ textarea {
+    width: 90%;
+	height:300px;
+    padding: 12px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: vertical;
+	background-color:#E0FFFF;
+}
 .button{
     padding-bottom:10px;
 	padding-left:3px;
