@@ -250,7 +250,7 @@ height: 200px;
 }
 
 .droite{
-	    overflow: scroll;
+	    overflow: auto;
 
 	margin-top:40px;
 	text-align:center;

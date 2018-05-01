@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Accueil</title>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="designaccueil.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="fichier.js"></script>
@@ -47,7 +48,7 @@
 	 
 	   <div class="experiences">
 	 <h2>Mes Expériences</h2>
-	 <p> Aller chercher la phrase d'intro</p>
+	 <p>  <?php echo "Celle-ci a été écrite entièrement en PHP."; ?></p>
 	 </div>
 	 
 	 
@@ -62,7 +63,5 @@
 	 
 	 
 	 </div>
-	 
-	
 </body>
 </html> 
