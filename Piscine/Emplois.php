@@ -36,18 +36,15 @@
 	 
 	  <div class="introduction">
 	 
-	 <p> Aller chercher la phrase d'intro</p>
+	 <p> Sur cette page, vous trouverez les offres d'emploi déposées par les différents membres de votre réseau</p>
 	 </div>
 	 
 	<div class="introduction">
-	
+	<form method='POST'>
+	<label> Barre de recherche : <input type="text" name="recherche"> </label> <br>
+	</form>
 </div>
-	 <div class="photo_profil">
-	 	 <p> Photo à aller chercher dans le base de donnés</p>
-	 </div>
-	 <div class="description">
-	 <p> Texte de la description à aller chercher dans le base de donnés</p>
-	 </div>
+	 
 	 
 	   <div class="experiences">
 	 <h2>Mes Expériences</h2>
