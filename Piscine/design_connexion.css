@@ -9,6 +9,8 @@ body{
 	padding-bottom:30px;
 padding-top: 10px;
 	  background-color: rgb(0, 113, 121);
+	  border-radius:8px;
+	    border: 2px solid black;
 }
 
 h1{
@@ -34,3 +36,26 @@ padding-bottom: 5px;
 	margin-top:70px;
 	margin-left:300px;
 }
+
+.button{
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+	   background-color: white; 
+    color: black; 
+    border: 2px solid rgb(90, 230, 230,0.5);
+    
+}
+
+
+.button:hover {
+    background-color: rgb(90, 230, 230,0.5);
+    color: white;
+}
+

@@ -34,32 +34,19 @@
 	 
 	 
 	  <div class="introduction">
-	 
-	 <p> Aller chercher la phrase d'intro</p>
+	
 	 </div>
 	 
-	 <div class="photo_profil">
+	 <div class="proposition">
+	  
 	 	 <p> Photo à aller chercher dans le base de donnés</p>
 	 </div>
-	 <div class="description">
+	 <div class="amis">
+	  <h2>Mes amis</h2>
 	 <p> Texte de la description à aller chercher dans le base de donnés</p>
 	 </div>
 	 
-	   <div class="experiences">
-	 <h2>Mes Expériences</h2>
-	 <p> Aller chercher la phrase d'intro</p>
-	 </div>
-	 
-	 
-	   <div class="formation">
-	 <h2>Ma Formation</h2>
-	 <p> Aller chercher la phrase d'intro</p>
-	 </div>
-	   <div class="competences">
-	 	 <h2>Mes Compétences</h2>
-	 <p> Aller chercher la phrase d'intro</p>
-	 </div>
-	 
+	  
 	 
 	 </div>
 	 

@@ -25,7 +25,7 @@
 	</tr>
 	<tr>
 	<td Colspan="7"> </td>
-		<td> <input type="submit" value="valider" /> </td>
+		<td> <input class="button" type="submit" value="valider" /> </td>
 		</tr>
 	</table>
 	</form>
