@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Accueil</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+
 <link href="designaccueil.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="fichier.js"></script>
 </head>
@@ -11,6 +12,7 @@
 
 <div class="tete">
 <header>
+
 <div class="logo">
         <img src="ece_logo.jpg" alt="Logo de l'Ece" width="100" height="100" >
 		</div>
@@ -36,11 +38,20 @@
 	  <div class="introduction">
 <p> Vous trouverez sur cette page tous vos contacts et vos relations ainsi que des propositions de nouvelles connexions</p>
 	 </div>
+	 
+	 	<div class="introduction">
+	<form method='POST'>
+	<label> Barre de recherche : <input type="text" name="recherche"> </label> 
+	 <input class="button" type="submit" value="rechercher" /> 
+	</form>
+</div>
+	 
 
 	 <div class="droite">
 	  	 <h3> Proposition de nouvelles relations</h3>
 	 	   <div class="nvamis">
-	 <h4> Prenom, Nom, adresse mail</h4>
+	 <h4> </h4>
+
 	 <p>Introduction de la personne</p>
 	 <div class="photo">
 	 <p>photo</p>
@@ -73,10 +84,10 @@
 	 </div>
 	 </div>
 	 </div>
-	 
-	  
+
 	 
 	 </div>
+
 	 
 	
 </body>

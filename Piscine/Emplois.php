@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Accueil</title>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="designaccueil.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="fichier.js"></script>
@@ -35,34 +36,33 @@
 	 
 	  <div class="introduction">
 	 
-	 <p> Aller chercher la phrase d'intro</p>
+	 <p> Sur cette page, vous trouverez les offres d'emploi déposées par les différents membres de votre réseau</p>
 	 </div>
 	 
-	 <div class="photo_profil">
-	 	 <p> Photo à aller chercher dans le base de donnés</p>
-	 </div>
-	 <div class="description">
-	 <p> Texte de la description à aller chercher dans le base de donnés</p>
-	 </div>
-	 
-	   <div class="experiences">
-	 <h2>Mes Expériences</h2>
-	 <p> Aller chercher la phrase d'intro</p>
-	 </div>
+	<div class="introduction">
+	<form method='POST'>
+	<label> Barre de recherche : <input type="text" name="recherche"> </label> 
+	 <input class="button" type="submit" value="rechercher" /> 
+	</form>
+</div>
 	 
 	 
-	   <div class="formation">
-	 <h2>Ma Formation</h2>
-	 <p> Aller chercher la phrase d'intro</p>
-	 </div>
-	   <div class="competences">
-	 	 <h2>Mes Compétences</h2>
-	 <p> Aller chercher la phrase d'intro</p>
+	   <div class="emploi">
+	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
+	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
 	 </div>
 	 
 	 
+	   <div class="emploi">
+	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
+	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
+	 </div>
+	    <div class="emploi">
+	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
+	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
 	 </div>
 	 
-	
+	 
+	 </div>
 </body>
 </html> 
