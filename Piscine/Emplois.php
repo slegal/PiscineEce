@@ -57,10 +57,7 @@
 	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
 	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
 	 </div>
-	    <div class="emploi">
-	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
-	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
-	 </div>
+	 
 	 
 	 
 	 </div>

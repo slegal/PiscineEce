@@ -34,29 +34,20 @@
 	 
 	 
 	  <div class="introduction">
-	 
+	 <p> Vos dernières notifications </p>
+	 </div>
+	
+	   <div class="notification">
+	 <h2><?php echo "Nom, prenom a publié TYPE DE CONTENU" ?></h2>
 	 <p> Aller chercher la phrase d'intro</p>
 	 </div>
 	 
-	 <div class="photo_profil">
-	 	 <p> Photo à aller chercher dans le base de donnés</p>
-	 </div>
-	 <div class="description">
-	 <p> Texte de la description à aller chercher dans le base de donnés</p>
-	 </div>
-	 
-	   <div class="experiences">
-	 <h2>Mes Expériences</h2>
+	  <div class="notification">
+	 <h2><?php echo "Nom, prenom a publié TYPE DE CONTENU" ?></h2>
 	 <p> Aller chercher la phrase d'intro</p>
 	 </div>
-	 
-	 
-	   <div class="formation">
-	 <h2>Ma Formation</h2>
-	 <p> Aller chercher la phrase d'intro</p>
-	 </div>
-	   <div class="competences">
-	 	 <h2>Mes Compétences</h2>
+	  <div class="notification">
+	 <h2><?php echo "Nom, prenom a publié TYPE DE CONTENU" ?></h2>
 	 <p> Aller chercher la phrase d'intro</p>
 	 </div>
 	 
