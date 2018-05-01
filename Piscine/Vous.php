@@ -39,29 +39,30 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
 	 
 	  <div class="introduction">
 	 
-	 <p> Aller chercher la phrase d'intro</p>
+	 <p> <?php echo '<p>'.$_SESSION['Phrase_d_intro'].'</p>'?> </p>
 	 </div>
 	 
 	 <div class="photo_profil">
-	 	 <p> <?php echo '<img src="'.$_SESSION['Lien_photo_profil'].'" width="200" height="200" alt""/>'?></p>
+	 	 <p> <?php echo '<img src="'.$_SESSION['Lien_photo_profil'].'" width="190" height="190" alt""/>'?></p>
 	 </div>
+			
 	 <div class="description">
-	 <p> Texte de la description à aller chercher dans le base de donnés</p>
+	 <p><?php echo '<p>'.$_SESSION['Description'].'</p>'?> </p>
 	 </div>
 	 
 	   <div class="experiences">
 	 <h2>Mes Expériences</h2>
-	 <p> Aller chercher la phrase d'intro</p>
+	 <p> A remplir </p>
 	 </div>
 	 
 	 
 	   <div class="formation">
 	 <h2>Ma Formation</h2>
-	 <p> Aller chercher la phrase d'intro</p>
+	 <p> A remplir </p>
 	 </div>
 	   <div class="competences">
 	 	 <h2>Mes Compétences</h2>
-	 <p> Aller chercher la phrase d'intro</p>
+	 <p> <?php echo '<p>'.$_SESSION['Phrase_d_intro'].'</p>'?></p>
 	 </div>
 	 
 	 
