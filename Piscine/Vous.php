@@ -43,7 +43,7 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
 	 </div>
 	 
 	 <div class="photo_profil">
-	 	 <p> <?php echo '<img src="'.$_SESSION['Lien_photo_profil'].'" width="190" height="190" alt""/>'?></p>
+	 	 <p> <?php echo '<img src="'.$_SESSION['Lien_photo_profil'].'" width="200" height="200" alt""/>'?></p>
 	 </div>
 	 <div class="description">
 	 <p> Texte de la description à aller chercher dans le base de donnés</p>
