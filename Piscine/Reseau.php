@@ -34,16 +34,19 @@
 	 
 	 
 	  <div class="introduction">
-	
+<p> Vous trouverez sur cette page tous vos contacts et vos relations ainsi que des propositions de nouvelles connexions</p>
 	 </div>
-	 
-	 <div class="proposition">
-	  
+
+	 <div class="droite">
+	  	 <h3> Proposition de nouvelles relations</h3>
 	 	 <p> Photo à aller chercher dans le base de donnés</p>
 	 </div>
-	 <div class="amis">
-	  <h2>Mes amis</h2>
+	 <div class="gauche">
+	 <h3>Mes amis</h3>
+	 
+	  <div class="amis">
 	 <p> Texte de la description à aller chercher dans le base de donnés</p>
+	 </div>
 	 </div>
 	 
 	  
