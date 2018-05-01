@@ -31,7 +31,9 @@
 	 
 </div>
 <div class="contenu">
-	 
+	<div class="bandegauche">
+	 <p></p>
+	 </div> 
 	 <h1> MON RESEAU</h1>
 	 
 	 

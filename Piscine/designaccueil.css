@@ -14,6 +14,14 @@ nav li
  
 }
 
+.bandegauche
+{
+	float:left;
+	background-color:#FFE4C4;
+	height:1500px;
+	width:70px;
+}
+
 
 nav a
 {
@@ -275,7 +283,7 @@ h3{
 	margin-top:40px;
 	text-align:center;
     text-decoration: none;
- margin-left:100px;
+ margin-left:30px;
  float: left;
 }
 
