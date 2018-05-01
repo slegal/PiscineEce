@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 30 avr. 2018 à 16:31
+-- Généré le :  mar. 01 mai 2018 à 12:38
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -31,10 +31,7 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `administrateur`;
 CREATE TABLE IF NOT EXISTS `administrateur` (
   `Num_administrateur` int(11) NOT NULL AUTO_INCREMENT,
-  `Nom` varchar(255) NOT NULL,
-  `Prenom` varchar(255) NOT NULL,
-  `Mot_de_passe` varchar(255) NOT NULL,
-  `Adresse_email` varchar(255) NOT NULL,
+  `Droit_d_acces` int(11) NOT NULL,
   PRIMARY KEY (`Num_administrateur`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
@@ -51,6 +48,19 @@ CREATE TABLE IF NOT EXISTS `centre_d_interet` (
   `Description` text NOT NULL,
   PRIMARY KEY (`Num_interet`),
   KEY `Num_utilisateur` (`Num_utilisateur`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `client`
+--
+
+DROP TABLE IF EXISTS `client`;
+CREATE TABLE IF NOT EXISTS `client` (
+  `Num_utilisateur` int(11) NOT NULL AUTO_INCREMENT,
+  `Droit_d_acces` int(11) NOT NULL,
+  PRIMARY KEY (`Num_utilisateur`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
