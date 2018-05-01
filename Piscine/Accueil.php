@@ -35,19 +35,15 @@
 	 
 	  <div class="introduction">
 	 
-	 <p> Aller chercher la phrase d'intro</p>
+	 <p> Bienvenu sur votre fil d'actualité, vous pouvez voir les dernières nouvelles de vos amis et de vos contacts professionels</p>
 	 </div>
+	
+	
 	 
-	 <div class="photo_profil">
-	 	 <p> Photo à aller chercher dans le base de donnés</p>
-	 </div>
-	 <div class="description">
-	 <p> Texte de la description à aller chercher dans le base de donnés</p>
-	 </div>
-	 
-	   <div class="experiences">
-	 <h2>Mes Expériences</h2>
-	 <p> Aller chercher la phrase d'intro</p>
+	   <div class="publication">
+	 <h2> <?php echo"NOM, PRENOM a publié un TYPE DE PUBLICATION. Se situe à ENDROIT à DDATE à HEURE et se sent EMOTIONS"?></h2>
+	 <p> LA Publication</p>
+	  <h5> <?php echo"Like commentaire publier"?></h5>
 	 </div>
 	 
 	 
