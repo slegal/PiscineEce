@@ -39,6 +39,9 @@
 	 <p> Aller chercher la phrase d'intro</p>
 	 </div>
 	 
+	<div class="introduction">
+	
+</div>
 	 <div class="photo_profil">
 	 	 <p> Photo à aller chercher dans le base de donnés</p>
 	 </div>
