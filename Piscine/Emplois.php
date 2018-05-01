@@ -42,7 +42,7 @@
 	<div class="introduction">
 	<form method='POST'>
 	<label> Barre de recherche : <input type="text" name="recherche"> </label> 
-	 <input class="button" type="submit" value="rechercher" /> 
+	 <input class="button" type="submit" value="publier" /> 
 	</form>
 </div>
 	 
