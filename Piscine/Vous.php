@@ -1,11 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php session_start(); ?>
+<!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>VOUS</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="designaccueil.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="fichier.js"></script>
+<?php
+//acces au num de session pour savoir qui est connecte
+echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];      
+?>		
 </head>
 <body>
 
@@ -39,7 +43,7 @@
 	 </div>
 	 
 	 <div class="photo_profil">
-	 	 <p> Photo à aller chercher dans le base de donnés</p>
+	 	 <p> <?php echo '<img src="'.$_SESSION['Lien_photo_profil'].'" width="200" height="200" alt""/>'?></p>
 	 </div>
 	 <div class="description">
 	 <p> Texte de la description à aller chercher dans le base de donnés</p>
