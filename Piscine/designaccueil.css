@@ -76,12 +76,28 @@ margin-top:20px;
  color:white;
 }
 input[type=text] {
-    width: 600px;
-    padding: 3px 12px;
+	margin-top:-10px;
+	   width: 130px;
     box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 0px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  
+}
+
+input[type=text]:focus {
+    width: 600px;
 }
 form{
-	margin-top:10px;
+	margin-left:20px;
+	float: left;
+	margin-top:0px;
 }
 
 .introduction{
@@ -91,7 +107,7 @@ text-align:center;
 	border: 2px solid black;
 	border-radius:5px;
   width:1125px;
-  height:45px;
+  height:50px;
 margin-top:10px;
  margin-left:100px;
  margin-right:100px;
@@ -162,6 +178,28 @@ height: 100px;
 margin-top:20px;
  margin-left:200px;
  margin-right:200px;
+
+}
+
+
+
+.emploi{
+	
+text-align:center;
+	   background-color: rgb(0, 113, 121);
+
+	
+	width:925px;
+height: 100px;
+    text-decoration: none;
+	border: 2px solid black;
+   
+
+
+margin-top:20px;
+ margin-left:200px;
+ margin-right:200px;
+
 
 }
 
@@ -266,4 +304,27 @@ height: 300px;
 
  margin-right:100px;
  float: right;
+}
+
+.button{
+    padding-bottom:10px;
+	padding-left:3px;
+	padding-right:3px;
+	margin-left:5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    cursor: pointer;
+	   background-color: white; 
+    color: black; 
+    border: 2px solid black;
+    
+}
+.button:hover {
+    background-color: rgb(90, 230, 230,0.5);
+    color: white;
 }

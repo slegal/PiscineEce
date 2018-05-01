@@ -41,24 +41,25 @@
 	 
 	<div class="introduction">
 	<form method='POST'>
-	<label> Barre de recherche : <input type="text" name="recherche"> </label> <br>
+	<label> Barre de recherche : <input type="text" name="recherche"> </label> 
+	 <input class="button" type="submit" value="rechercher" /> 
 	</form>
 </div>
 	 
 	 
-	   <div class="experiences">
-	 <h2>Mes Expériences</h2>
-	 <p>  <?php echo "Celle-ci a été écrite entièrement en PHP."; ?></p>
+	   <div class="emploi">
+	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
+	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
 	 </div>
 	 
 	 
-	   <div class="formation">
-	 <h2>Ma Formation</h2>
-	 <p> Aller chercher la phrase d'intro</p>
+	   <div class="emploi">
+	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
+	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
 	 </div>
-	   <div class="competences">
-	 	 <h2>Mes Compétences</h2>
-	 <p> Aller chercher la phrase d'intro</p>
+	    <div class="emploi">
+	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
+	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
 	 </div>
 	 
 	 
