@@ -38,7 +38,8 @@ $db_found=mysqli_select_db($db_handle,$database);
 			$_SESSION['Lien_photo_couverture']=$data['Lien_photo_couverture'];
 			$_SESSION['Description']=$data['Description'];
 			$_SESSION['Phrase_d_intro']=$data['Phrase_d_intro'];
-            
+            $_SESSION['Type_user']=$data['Type_user'];
+			
 			echo $_SESSION['Num_utilisateur'];
 			echo $_SESSION['Nom'];
 			echo $_SESSION['Prenom'];
@@ -48,7 +49,8 @@ $db_found=mysqli_select_db($db_handle,$database);
 			echo $_SESSION['Lien_photo_profil'];
 			echo $_SESSION['Lien_photo_couverture'];
 			echo $_SESSION['Description'];
-			echo $_SESSION['Phrase_d_intro'];}
+			echo $_SESSION['Phrase_d_intro'];
+			echo $_SESSION['Type_user'];}
         }
        
     }
