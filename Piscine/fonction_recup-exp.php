@@ -4,7 +4,7 @@ affiche les experiences de l'utilisateur */
 function recupexp($num_u)
 {
 	$database='linkece';
-	$db_handle=mysqli_connect('localhost', 'root', 'p21');
+	$db_handle=mysqli_connect('localhost', 'root', '');
 	$db_found=mysqli_select_db($db_handle,$database);
 	
     if($db_found) {
@@ -34,17 +34,17 @@ function recupexp($num_u)
 			
 			//echo $a;
 			$tabstringexpe[$p] = $a; ///TABLEAU AYANT AUTANT DE LIGNE ET CONTENANT LES LES PHRASES A AFFICHER
-			$p++; ///UNE FOIS LA LIGNE FINIE ON PASSE A LA LIGNE SUIVANTE EN INCREMENTANT
-			
-			
-			
+			$p++; ///UNE FOIS LA LIGNE FINIE ON PASSE A LA LIGNE SUIVANTE EN INCREMENTAN
 			}
-												
+			?>
+			<ul> 
+<?php			
 		///AFFICHAGE
 		for ($g = 0; $g <sizeof($tabstringexpe);$g++)
-		{
-		echo $tabstringexpe[$g];
-		?></br><?php
+		{?>
+	
+	<li><?php	echo $tabstringexpe[$g];?></li>
+		<?php
 		}
 		
 		}

@@ -62,12 +62,17 @@ require 'fonction_recup-comp.php';
 	 
 	 
 	   <div class="formation">
-	 <h2>Ma Formation</h2>
+	 <h2>Mes Formation</h2>
 	 <p> A remplir </p>
 	 </div>
 	   <div class="competences">
 	 	 <h2>Mes Compétences</h2>
 	 <p><?php recupcomp(recupcompsuivie($_SESSION['Num_utilisateur']))?></p>
+	 </div>
+	 
+	 	   <div class="interet">
+	 	 <h2>Mes centres d'interet </h2>
+	 <p> centre d'interet</p>
 	 </div>
 	 
 	 
