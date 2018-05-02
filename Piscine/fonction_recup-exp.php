@@ -1,6 +1,6 @@
 <?php
 /* Ci-dessous, la fonction qui prend en parametre le Num_utilisateur et 
-renvoie le champ entreprise des experiences de l'utilisateur dans un tableau */
+affiche les experiences de l'utilisateur */
 function recupexp($num_u)
 {
 	$database='linkece';

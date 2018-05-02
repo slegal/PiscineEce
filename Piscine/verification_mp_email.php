@@ -1,6 +1,4 @@
 <?php
-require 'fonction_recup-exp.php';
-
 session_start();
 
 $database='linkece';

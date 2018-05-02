@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php 
+session_start(); //permet d'acceder aux infos de l'utilisateur recuperee dans verif_mp_email
+require 'fonction_recup-exp.php';
+//require 'fonction_recup-comp.php'; à venir..
+?>
+
 <!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
@@ -6,10 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="designaccueil.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="fichier.js"></script>
-<?php
-//acces au num de session pour savoir qui est connecte
-echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];      
-?>		
+	
 </head>
 <body>
 
@@ -53,8 +55,8 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
 	 </div>
 	 
 	   <div class="experiences">
-	 <h2>Mes Expériences</h2>
-	 <p> A remplir </p>
+	 <h2>Mes Experiences</h2>
+	 <p> <?php recupexp($_SESSION['Num_utilisateur']) ?> </p>
 	 </div>
 	 
 	 
