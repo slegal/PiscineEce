@@ -1,6 +1,7 @@
-{
-    box-sizing: border-box;
-}
+
+
+
+
 
 input[type=text], select, textarea {
     width: 80%;
@@ -41,6 +42,8 @@ input[type=submit]:hover {
 }
 
 .container {
+	margin-top:20px;
+	border:2px solid black;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;

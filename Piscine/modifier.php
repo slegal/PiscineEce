@@ -18,7 +18,7 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
 <body>
 <h1>Modifier le profil</h1>
 <div class="introduction">
-<p> Vous pouvez modifier les informations de votre profil sur cette page. Le Nom, le Prénom et l'Email ne sont modifiable que par un administrateur de l'ECE. Vous
+<p> Vous pouvez modifier les informations de votre profil sur cette page. Le Nom, le Prénom et l'Email ne sont modifiables que par un administrateur de l'ECE. Vous
 pouvez également ajouter une expérience, une formatoin, une compétence et un centre d'interêt.</p>
 </div>
 
