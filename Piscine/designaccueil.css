@@ -67,7 +67,7 @@ nav{
 
 .contenu{
 	
-	margin-top:10px;
+	margin-top:25px;
 	background-color: rgba(3, 160, 160,0.5);
 	border: 2px solid black;
 	padding-bottom:50%;
@@ -334,11 +334,12 @@ margin-top:10px;
     text-decoration: none;
 	border: 2px solid black;
 width:925px;
-height: 330px;
+height: 350px;
 
 margin-top:25px;
  margin-left:200px;
  margin-right:200px;
+ padding-bottom:20px;;
 }
 
 .amis{
@@ -382,6 +383,7 @@ height: 300px;
     border-radius: 4px;
     resize: vertical;
 	background-color:#E0FFFF;
+	margin-bottom:10px;
 }
 .button{
     padding-bottom:10px;

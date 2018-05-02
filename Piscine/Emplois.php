@@ -49,6 +49,16 @@ require 'fonction_recup-emploi.php';
 	 <input class="button" type="submit" value="publier" /> 
 	</form>
 </div>
+<div class="publier">
+	<h2> Vous souhaitez publier une offre d'emploi? </h2>
+	 <div class="col-75">
+	 <form>
+	  <textarea id="intitule_offre" name="intitule_offre" placeholder="Intitule de votre offre d'emploi..." style="height:20px"></textarea>
+        <textarea id="description_offre" name="description offre" placeholder="Decrivez votre offre d'emploi..." style="height:180px"></textarea>
+		 <input class="button" type="submit" value="publier" /> 
+		</form>
+      </div>
+	</div>
 	 <?php $tabemploi=recupemploi();
 	 
 	 for ($i = 0; $i < sizeof($tabemploi);$i++) ///NOMBRE DE DIV A FAIRE
@@ -60,7 +70,7 @@ require 'fonction_recup-emploi.php';
 		echo $tabemploi[$i][4]; ///NOM
 		echo " ";
 		echo $tabemploi[$i][5];///PRENOM
-		echo" ajoute une offre d'emplois :" ;
+		echo" a ajouté une offre d'emploi : " ;
 		 echo $tabemploi[$i][3];?></h2>
 		<p>  <?php echo $tabemploi[$i][1]?></p>
 		</div>
