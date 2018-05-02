@@ -1,3 +1,7 @@
+<?php 
+require 'fonction_recup-emploi.php';
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -45,18 +49,28 @@
 	 <input class="button" type="submit" value="publier" /> 
 	</form>
 </div>
+	 <?php $tabemploi=recupemploi();
+	 
+	 for ($i = 0; $i < sizeof($tabemploi);$i++) ///NOMBRE DE DIV A FAIRE
+	 {
+		 
+		 ?>
+		<div class="emploi">
+		<h2><?php
+		echo $tabemploi[$i][4]; ///NOM
+		echo " ";
+		echo $tabemploi[$i][5];///PRENOM
+		echo" ajoute une offre d'emplois :" ;
+		 echo $tabemploi[$i][3];?></h2>
+		<p>  <?php echo $tabemploi[$i][1]?></p>
+		</div>
+		<?php
+	 }
 	 
 	 
-	   <div class="emploi">
-	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
-	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
-	 </div>
+	 ?>
 	 
-	 
-	   <div class="emploi">
-	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
-	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
-	 </div>
+
 	 
 	 
 	 
