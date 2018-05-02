@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 01 mai 2018 à 17:11
+-- Généré le :  mer. 02 mai 2018 à 12:03
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -164,7 +164,7 @@ CREATE TABLE IF NOT EXISTS `experience` (
   `Poste` varchar(255) NOT NULL,
   PRIMARY KEY (`Num_experience`),
   KEY `Num_utilisateur` (`Num_utilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `experience`
@@ -173,7 +173,9 @@ CREATE TABLE IF NOT EXISTS `experience` (
 INSERT INTO `experience` (`Num_experience`, `Num_utilisateur`, `Entreprise`, `Date_debut`, `Date_fin`, `Poste`) VALUES
 (1, 1, 'RATP', '2017-06-02', '2017-07-06', 'Guichetier'),
 (2, 2, 'MAAF', '2016-06-02', '2016-07-02', 'Technicienne de Surface'),
-(3, 3, 'Canigou', '2018-01-23', '2018-02-28', 'Comptable');
+(3, 3, 'Canigou', '2018-01-23', '2018-02-28', 'Comptable'),
+(4, 1, 'Renault', '2018-01-01', '2018-02-07', 'Stagiaire'),
+(5, 2, 'McDonald', '2018-05-23', '2018-05-26', 'Serveuse');
 
 -- --------------------------------------------------------
 
