@@ -4,7 +4,7 @@ renvoie dans un tableau les Num_Competence qui correspondent à celles qu'il a *
 function recupcompsuivie($num_u)
 {
 	$database='linkece';
-	$db_handle=mysqli_connect('localhost', 'root', 'p21');
+	$db_handle=mysqli_connect('localhost', 'root', '');
 	$db_found=mysqli_select_db($db_handle,$database);
 	
     if($db_found) {
@@ -20,11 +20,7 @@ function recupcompsuivie($num_u)
 		$tabnum[] = $row['Num_competence'];
 													}
 													
-		///AFFICHAGE
-		foreach($tabnum as $element)
-		{
-		echo $element . '<br />'; // affichera les num_comp
-		}
+		
 		}
     else { echo "Base de données non trouvée."; }
 

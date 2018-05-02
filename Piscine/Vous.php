@@ -2,6 +2,7 @@
 session_start(); //permet d'acceder aux infos de l'utilisateur recuperee dans verif_mp_email
 require 'fonction_recup-exp.php';
 require 'fonction_recup-comp-suivie.php';
+require 'fonction_recup-comp.php';
 ?>
 
 <!DOCTYPE>
@@ -66,7 +67,7 @@ require 'fonction_recup-comp-suivie.php';
 	 </div>
 	   <div class="competences">
 	 	 <h2>Mes Compétences</h2>
-	 <p><?php recupcompsuivie($_SESSION['Num_utilisateur'])?></p>
+	 <p><?php recupcomp(recupcompsuivie($_SESSION['Num_utilisateur']))?></p>
 	 </div>
 	 
 	 

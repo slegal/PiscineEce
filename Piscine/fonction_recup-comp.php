@@ -1,38 +1,36 @@
 <?php
-/* Ci-dessous, la fonction qui prend en parametre le Num_utilisateur et 
-renvoie dans un tableau les Num_Competence qui correspondent à celles qu'il a */
-function recupcompsuivie($num_u)
+/* Ci-dessous, la fonction qui prend en parametre un tableau de Num_competence
+Affiche la description qui correspond */
+function recupcomp($arr)
 {
 	$database='linkece';
-	$db_handle=mysqli_connect('localhost', 'root', 'p21');
+	$db_handle=mysqli_connect('localhost', 'root', '');
 	$db_found=mysqli_select_db($db_handle,$database);
 	
     if($db_found) {
-		
-   ////// LE TABLEAU RETOURNE
-		$tabnum = array();		
-		
-		$sql = "SELECT* FROM competence_suivie WHERE Num_utilisateur = $num_u ";
-        $result = mysqli_query($db_handle, $sql) or die(mysql_error())  ;
-		
-		///REMPLISSAGE
-		foreach  ($db_handle->query($sql) as $row) {
-		$tabnum[] = $row['Num_competence'];
-													}
-													
-		///AFFICHAGE
-		foreach($tabnum as $element)
+	
+			
+		for ($i = 0; $i <sizeof($arr);$i++)
 		{
-		echo $element . '<br />'; // affichera les num_comp
+			$num_c=$arr[$i];		
+			$sql = "SELECT* FROM competence WHERE Num_competence=$num_c "; 
+			$result = mysqli_query($db_handle, $sql);
+			$data = mysqli_fetch_assoc($result);
+			
+			  echo $data['Description'];	
+			 
+		}  
+			  
 		}
-		}
-    else { echo "Base de données non trouvée."; }
+		
+		
 
 	mysqli_close($db_handle);
-	return $tabnum;
+	
 		
 			
-        }
+}
+
 				
 
 ?>
