@@ -12,7 +12,7 @@
 <div class="carre">
 <h1>Bienvenu sur LINKECE</h1> 
 <p></p>
-<form action="traitement.php" method="post">
+<form action="verification_mp_email.php" method="post">
 	<table id ="maTable">
 	<tr>
 		<td> Adresse E-mail: </td>
