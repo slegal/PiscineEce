@@ -3,6 +3,10 @@ session_start(); //permet d'acceder aux infos de l'utilisateur recuperee dans ve
 require 'fonction_recup-exp.php';
 require 'fonction_recup-comp-suivie.php';
 require 'fonction_recup-comp.php';
+require 'fonction_recup-interet-suivi.php';
+require 'fonction_recup-interet.php';
+require 'fonction_recup-form-suivie.php';
+require 'fonction_recup-form.php';
 ?>
 
 <!DOCTYPE>
@@ -63,7 +67,7 @@ require 'fonction_recup-comp.php';
 	 
 	   <div class="formation">
 	 <h2>Mes Formation</h2>
-	 <p> A remplir </p>
+	 <p> <?php recupform(recupformsuivie($_SESSION['Num_utilisateur']))?></p>
 	 </div>
 	   <div class="competences">
 	 	 <h2>Mes Compétences</h2>
@@ -72,7 +76,7 @@ require 'fonction_recup-comp.php';
 	 
 	 	   <div class="interet">
 	 	 <h2>Mes centres d'interet </h2>
-	 <p> centre d'interet</p>
+	 <p> <?php recupinteret(recupinteretsuivi($_SESSION['Num_utilisateur']))?></p>
 	 </div>
 	 
 	 

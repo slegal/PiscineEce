@@ -1,7 +1,7 @@
 <?php
-/* Ci-dessous, la fonction qui prend en parametre un tableau de Num_competence
+/* Ci-dessous, la fonction qui prend en parametre un tableau de Num_interet
 Affiche la description qui correspond */
-function recupcomp($arr)
+function recupinteret($arr)
 {
 	$database='linkece';
 	$db_handle=mysqli_connect('localhost', 'root', '');
@@ -12,8 +12,8 @@ function recupcomp($arr)
 			
 		for ($i = 0; $i <sizeof($arr);$i++)
 		{
-			$num_c=$arr[$i];		
-			$sql = "SELECT* FROM competence WHERE Num_competence=$num_c "; 
+			$num_i=$arr[$i];		
+			$sql = "SELECT* FROM centre_d_interet WHERE Num_interet=$num_i "; 
 			$result = mysqli_query($db_handle, $sql);
 			$data = mysqli_fetch_assoc($result);
 			
