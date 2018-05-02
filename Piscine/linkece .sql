@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 02 mai 2018 à 12:03
+-- Généré le :  mer. 02 mai 2018 à 17:24
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -146,7 +146,16 @@ CREATE TABLE IF NOT EXISTS `emploi` (
   `Titre` text NOT NULL,
   PRIMARY KEY (`Num_emploi`),
   KEY `Num_utilisateur` (`Num_utilisateur`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `emploi`
+--
+
+INSERT INTO `emploi` (`Num_emploi`, `Num_utilisateur`, `Description`, `Date_creation`, `Titre`) VALUES
+(1, 1, 'Poste d ingenieur a la FNAC ', '2018-05-02', 'Ingenieur '),
+(2, 2, 'Conseil de vente au magasin Jardiland', '2018-05-15', 'Vendeuse '),
+(3, 3, 'Vente de boisson non alcoolisé dans le bar d\'une entreprise.', '2018-05-10', 'Barman');
 
 -- --------------------------------------------------------
 
