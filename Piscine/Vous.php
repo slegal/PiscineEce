@@ -33,17 +33,19 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
 	 
 </div>
 <div class="contenu">
-	 
+	  <div class="crayon">
+	<a href="modifier?php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
+	 </div>
 	 <h1> VOUS</h1>
 	 
-	 
+
 	  <div class="introduction">
-	 
+	
 	 <p> <?php echo '<p>'.$_SESSION['Phrase_d_intro'].'</p>'?> </p>
 	 </div>
 	 
 	 <div class="photo_profil">
-	 	 <p> <?php echo '<img src="'.$_SESSION['Lien_photo_profil'].'" width="190" height="190" alt""/>'?></p>
+	 	 <p> <?php echo '<img src="'.$_SESSION['Lien_photo_profil'].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
 	 </div>
 			
 	 <div class="description">
