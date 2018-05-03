@@ -1,5 +1,6 @@
 <?php 
 require 'fonction_recup-emploi.php';
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -52,9 +53,9 @@ require 'fonction_recup-emploi.php';
 <div class="publier">
 	<h2> Vous souhaitez publier une offre d'emploi? </h2>
 	 <div class="col-75">
-	 <form>
+	 <form action="traitement_ajouter_emploi.php" method="post">
 	  <textarea id="intitule_offre" name="intitule_offre" placeholder="Intitule de votre offre d'emploi..." style="height:20px"></textarea>
-        <textarea id="description_offre" name="description offre" placeholder="Decrivez votre offre d'emploi..." style="height:180px;margin-left:60px"></textarea>
+        <textarea id="description_offre" name="description_offre" placeholder="Decrivez votre offre d'emploi..." style="height:180px;margin-left:60px"></textarea>
 		 <input class="button" type="submit" value="publier" /> 
 		</form>
       </div>

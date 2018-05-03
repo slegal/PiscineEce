@@ -41,7 +41,7 @@ require 'fonction_recup-form.php';
 </div>
 <div class="contenu">
 	  <div class="crayon">
-	<a href="modifier?php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
+	<a href="modifier_utilisateur.php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
 	 </div>
 	 <h1> VOUS</h1>
 	 

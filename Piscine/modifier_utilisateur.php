@@ -21,6 +21,25 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 
 <div class="container">
   <form action="traitement_modifier_utilisateur.php" method="post">
+   <div class="row">
+      <div class="col-25">
+        <label for="fname">Pseudo</label>
+      </div>
+      <div class="col-75">
+     <input type="text" id="pseudo" name="introduction" >
+      </div>
+    </div>
+	
+	
+	 <div class="row">
+      <div class="col-25">
+        <label for="fname">Mot de Passe</label>
+      </div>
+      <div class="col-75">
+     <input type="password" id="mdp" name="mdp" >
+      </div>
+    </div>
+	
     <div class="row">
       <div class="col-25">
         <label for="fname">Phrase d'introduction</label>
