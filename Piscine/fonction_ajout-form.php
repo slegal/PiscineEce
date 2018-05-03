@@ -3,7 +3,7 @@
 ajoute dans la BDD la formation de l'utilisateur */
 function ajoutform($num_u, $arr)
 {
-	echo "tamere";
+	
 	$database='linkece';
 	$db_handle=mysqli_connect('localhost', 'root', 'p21');
 	$db_found=mysqli_select_db($db_handle,$database);

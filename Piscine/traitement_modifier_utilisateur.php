@@ -1,6 +1,9 @@
 <?php session_start();
 require 'fonction_ajout-exp.php';
 require 'fonction_ajout-form.php';
+require 'fonction_ajout-comp.php';
+require 'fonction_ajout-interet.php';
+
 
 //recuperation de l'utilisateur actuel
  $num_u=$_SESSION["Num_utilisateur"]; 
@@ -65,10 +68,33 @@ if($db_found) {
 			et génère la requete sql*/
 				ajoutform($num_u,$arr);
 				
-				
+			}	
 			}
 			else{echo 'Veuillez remplir tous les champs pour ajouter une experience  ';}	
+			
+///AJOUT COMPETENCE
+//recuperation du champ de la partie competence : SI REMPLI 
 
+			if (isset($_POST['description_competence']))
+			{if ((($_POST['description_competence'])!=''))
+			{
+				$description_competence=$_POST["description_competence"];
+				/*la fonction qui prend en parametre num_utilisateur et le champ description rempli
+				et génère la requete sql pour l'ajouter dans les tables requises*/
+				ajoutcomp($num_u,$description_competence);
+			}}
+
+///AJOUT INTERET
+//recuperation du champ de la partie interet : SI REMPLI 
+
+			if (isset($_POST['description_interet']))
+			{if ((($_POST['description_interet'])!=''))
+			{
+				$description_interet=$_POST["description_interet"];
+				/*la fonction qui prend en parametre num_utilisateur et le champ description rempli
+				et génère la requete sql pour l'ajouter dans les tables requises*/
+				ajoutinteret($num_u,$description_interet);
+			}}
 			
 			
 			

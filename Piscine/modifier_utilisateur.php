@@ -136,7 +136,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	  	  	<img src="plus.png" width="30" height="30" alt"plus">
 	  </div>
 	  <div class="col-75">
-       <input type="text" id="competence" value="competence">
+       <input type="text" id="competence" name="description_competence">
 	  </div>
 
  </div>
@@ -148,7 +148,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	  	  	<img src="plus.png" width="30" height="30" alt"plus">
 	  </div>
 	  <div class="col-75">
-       <input type="text" id="centre_interet" value="centre d'interet">
+       <input type="text" id="centre_interet" name="description_interet" >
 	  </div>
 
  </div>
