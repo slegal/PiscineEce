@@ -62,7 +62,7 @@ require 'fonction_recup-emploi.php';
 	</div>
 	 <?php $tabemploi=recupemploi();
 	 
-	 for ($i = 0; $i < sizeof($tabemploi);$i++) ///NOMBRE DE DIV A FAIRE
+	 for ($i = sizeof($tabemploi)-1; $i > -1;$i--) ///NOMBRE DE DIV A FAIRE
 	 {
 		 
 		 ?>
