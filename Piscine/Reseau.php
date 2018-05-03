@@ -53,27 +53,7 @@ require 'fonction_recup-amis.php';
 	 <input class="button" type="submit" value="rechercher" /> 
 	</form>
 </div>
-	 
-
-	 <div class="droite">
-	  	 <h3> Proposition de nouvelles relations</h3>
-	 	   <div class="nvamis">
-	 <h4> </h4>
-
-	 <p>Introduction de la personne</p>
-	 <div class="photo">
-	 <p>photo</p>
-	 </div>
-	 </div>
-	   <div class="nvamis">
-	 <h4> Prenom, Nom, adresse mail</h4>
-	 <p>Introduction de la personne</p>
-	 <div class="photo">
-	 <p>photo</p>
-	 </div>
-	 </div>
-	 </div>
-	 <div class="gauche">
+	  <div class="gauche">
 	 <h3>Mes amis</h3>
 	 <?php ?>
 	 <?php $tabami=recupami(); 
@@ -99,6 +79,26 @@ require 'fonction_recup-amis.php';
 	?>
 	 
 	 </div>
+
+	 <div class="droite">
+	  	 <h3> Proposition de nouvelles relations</h3>
+	 	   <div class="nvamis">
+	 <h4> </h4>
+
+	 <p>Introduction de la personne</p>
+	 <div class="photo">
+	 <p>photo</p>
+	 </div>
+	 </div>
+	   <div class="nvamis">
+	 <h4> Prenom, Nom, adresse mail</h4>
+	 <p>Introduction de la personne</p>
+	 <div class="photo">
+	 <p>photo</p>
+	 </div>
+	 </div>
+	 </div>
+	
 
 	 
 	 </div>
