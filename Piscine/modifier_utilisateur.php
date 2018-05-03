@@ -1,4 +1,3 @@
-
 <?php session_start(); ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -26,7 +25,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
         <label for="fname">Pseudo</label>
       </div>
       <div class="col-75">
-     <input type="text" id="pseudo" name="introduction" >
+     <input type="text" id="pseudo" name="pseudo" >
       </div>
     </div>
 	
@@ -64,7 +63,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	  	<img src="plus.png" width="30" height="30" alt"plus">
 	  </div>
 	  <div class="col-60">
-       <input type="text" id="experience" value="entreprise1">
+       <input type="text" id="entreprise" name="entreprise" value="entreprise1">
 	  </div>
 	<p>  Entreprise</p>
  </div>
@@ -72,7 +71,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="text" id="poste" value="Poste occupe">
+       <input type="text" id="poste" name="poste" value="Poste occupe">
    </div>
    <p> Poste occupe</p>
       </div>
@@ -80,7 +79,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="date" id="date debut" value="Date de debut">
+       <input type="date" id="date debut" name="dD" value="Date de debut">
    </div>
    <p> Date de début</p>
       </div>
@@ -88,7 +87,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="date" id="date fin" value="Date de fin">
+       <input type="date" id="date fin" name="dF" value="Date de fin">
 	   </div>
 	   <p> Date de fin</p>
 

@@ -67,6 +67,7 @@ require 'fonction_recup-form.php';
 	 
 	   <div class="formation">
 	 <h2>Mes Formation</h2>
+
 	 <p> <?php recupform(recupformsuivie($_SESSION['Num_utilisateur']))?></p>
 	 </div>
 	   <div class="competences">
