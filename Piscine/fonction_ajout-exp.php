@@ -1,5 +1,5 @@
 <?php
-/* Ci-dessous, la fonction qui prend en parametre le Num_utilisateur et un tableau des données à modifier 
+/* Ci-dessous, la fonction qui prend en parametre le Num_utilisateur et un tableau des données à ajouter 
 ajoute dans la BDD l'experience de l'utilisateur */
 function ajoutexp($num_u, $arr)
 {

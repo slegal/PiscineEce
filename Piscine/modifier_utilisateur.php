@@ -25,7 +25,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
         <label for="fname">Pseudo</label>
       </div>
       <div class="col-75">
-     <input type="text" id="pseudo" name="pseudo" >
+     <input type="text" id="pseudo" name="pseudo" value="<?php echo $_SESSION['Pseudo']?>" >
       </div>
     </div>
 	
@@ -35,7 +35,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
         <label for="fname">Mot de Passe</label>
       </div>
       <div class="col-75">
-     <input type="password" id="mdp" name="mdp" >
+     <input type="password" id="mdp" name="mdp" value="<?php echo $_SESSION['Mot_de_passe']?>" >
       </div>
     </div>
 	
@@ -63,7 +63,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	  	<img src="plus.png" width="30" height="30" alt"plus">
 	  </div>
 	  <div class="col-60">
-       <input type="text" id="entreprise" name="entreprise" value="entreprise1">
+       <input type="text" id="entreprise" name="entreprise" >
 	  </div>
 	<p>  Entreprise</p>
  </div>
@@ -71,7 +71,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="text" id="poste" name="poste" value="Poste occupe">
+       <input type="text" id="poste" name="poste" >
    </div>
    <p> Poste occupe</p>
       </div>
@@ -79,7 +79,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="date" id="date debut" name="dD" value="Date de debut">
+       <input type="date" id="date debut" name="dD" >
    </div>
    <p> Date de début</p>
       </div>
@@ -87,7 +87,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="date" id="date fin" name="dF" value="Date de fin">
+       <input type="date" id="date fin" name="dF" >
 	   </div>
 	   <p> Date de fin</p>
 
@@ -100,7 +100,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	  	  	<img src="plus.png" width="30" height="30" alt"plus">
 	  </div>
 	  <div class="col-60">
-       <input type="text" id="ecole" value="ecole ou université">
+       <input type="text" id="ecole" name="ecole" >
 	  </div>
 	<p>Ecole ou université</p>
  </div>
@@ -108,7 +108,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="text" id="diplome" value="Diplome obtenu">
+       <input type="text" id="diplome" name="diplome" >
    </div>
    <p> Diplome obtenu</p>
       </div>
@@ -116,7 +116,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="text" id="description_formation" value="description formation">
+       <input type="text" id="description_formation" name="description_formation">
    </div>
    <p> Description de la formation</p>
       </div>
@@ -124,7 +124,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="date" id="date_diplome" value="Date diplome">
+       <input type="date" id="date_diplome" name="date_diplome" >
 	   </div>
 	   <p> Date de l'obtention du diplome</p>
 </div>
