@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 03 mai 2018 à 14:53
+-- Généré le :  jeu. 03 mai 2018 à 16:41
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -131,9 +131,7 @@ INSERT INTO `contact` (`Num_utilisateur`, `Num_ami`) VALUES
 (1, 2),
 (2, 1),
 (2, 3),
-(2, 4),
-(3, 2),
-(4, 2);
+(3, 2);
 
 -- --------------------------------------------------------
 
@@ -150,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `emploi` (
   `Titre` text NOT NULL,
   PRIMARY KEY (`Num_emploi`),
   KEY `Num_utilisateur` (`Num_utilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `emploi`
@@ -287,27 +285,17 @@ INSERT INTO `like` (`Num_post`, `Num_utilisateur`) VALUES
 
 DROP TABLE IF EXISTS `post`;
 CREATE TABLE IF NOT EXISTS `post` (
-  `Num_post` int(11) NOT NULL AUTO_INCREMENT,
+  `Num_post` int(11) NOT NULL,
   `Num_utilisateur` int(11) NOT NULL,
   `Nombre_de_like` int(11) NOT NULL,
   `Nombre_de_comment` int(11) NOT NULL,
   `Contenu` text NOT NULL,
   `Lieu` text NOT NULL,
-  `Heure` time NOT NULL,
-  `Date` date NOT NULL,
   `Emotion` varchar(255) NOT NULL,
-  `Confidentialité` int(11) NOT NULL,
+  `Confidentialite` int(11) NOT NULL,
   `Type_contenu` text NOT NULL,
-  PRIMARY KEY (`Num_post`),
-  KEY `Num_utilisateur` (`Num_utilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Déchargement des données de la table `post`
---
-
-INSERT INTO `post` (`Num_post`, `Num_utilisateur`, `Nombre_de_like`, `Nombre_de_comment`, `Contenu`, `Lieu`, `Heure`, `Date`, `Emotion`, `Confidentialité`, `Type_contenu`) VALUES
-(1, 1, 3, 0, 'Aujourd\'hui je code!', 'ECE Paris', '10:00:00', '2018-04-30', 'Triste', 0, 'texte');
+  PRIMARY KEY (`Num_post`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -329,7 +317,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Phrase_d_intro` text,
   `Type_user` int(11) NOT NULL,
   PRIMARY KEY (`Num_utilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `utilisateur`
