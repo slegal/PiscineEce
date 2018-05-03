@@ -6,14 +6,16 @@
 
   
 if($db_found) {
-    
-    $sql =  "INSERT INTO emploi (Num_emploi, Num_utilisateur, Description, Date_creation, Titre) 
- VALUES('0',".$_SESSION['Num_utilisateur'].",'".$_POST["description_offre"]."',NOW(),'".$_POST["intitule_offre"]."')";
-    
+	
+
+    $sql="INSERT INTO post (Num_post, Num_utilisateur, Nombre_de_like, Nombre_de_comment, Contenu, Lieu, Emotion, Confidentialite, Type_contenu) 
+	VALUES ('0', ".$_SESSION['Num_utilisateur'].", '0', '0', '".$_POST["subject"]."', '".$_POST["location"]."','".$_POST["emotion"]."', '0', '".$_POST["type"]."')";
+
+
    echo $sql;
     
-    $result = mysqli_query($db_handle, $sql);  
-		header('Location: Emplois.php');
+    $result = mysqli_query($db_handle, $sql) or die(mysql_error());  
+		header('Location: Accueil.php');
     }
     
     else { echo "Base de données non trouvée."; }

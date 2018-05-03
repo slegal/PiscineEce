@@ -1,3 +1,8 @@
+<?php 
+require 'fonction_recup-post.php';
+?>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -40,23 +45,50 @@
 	
 	<div class="publier">
 	<h2> Vous souhaitez publier quelque chose? </h2>
-	<form action="traitement_ajouter_emploi.php" method="post">
+
 	 <div class="col-75">
-	 <form>
-        <textarea id="subject" name="subject" placeholder="Ecrivez quelque chose..." style="height:200px "></textarea>
+		<form action="traitement_ajouter_post.php" method="POST">
+			 <textarea id="location" name="location" placeholder="Endoit où vous vous trouvez..." style="height:20px"></textarea>
+		 <textarea id="type" name="type" placeholder="Type de publication A CHANGER PAR UNE SELECT BOX..." style="height:20px"></textarea>
+		  <textarea id="emotion" name="emotion" placeholder="Comment vous sentez vous?..." style="height:20px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Ecrivez quelque chose..." style="height:200px; margin-left:60px "></textarea>
+	
 		 <input class="button" type="submit" value="publier" /> 
 		</form>
       </div>
 	</div>
 	 
 	   <div class="publication">
-	 <h2> <?php echo"NOM, PRENOM a publié un TYPE DE PUBLICATION. Se situe à ENDROIT à DDATE à HEURE et se sent EMOTIONS"?></h2>
+	 <h2> <?php echo"NOM, PRENOM a publié un TYPE DE PUBLICATION. Se situe à ENDROIT  et se sent EMOTIONS"?></h2>
 	 <p> LA Publication</p>
 	  <h5> <?php echo"Like commentaire publier"?></h5>
 	 </div>
 	 
 	 
-	
+ <?php $tabemploi=recuppost();
+	 
+	 for ($i = sizeof($tabemploi)-1; $i > -1;$i--) ///NOMBRE DE DIV A FAIRE
+	 {
+		 
+		 ?>
+		<div class="emploi">
+		<h2><?php
+		echo $tabemploi[$i][10]; ///NOM
+		echo " ";
+		echo $tabemploi[$i][9];///PRENOM
+		echo" a publié un post de type" ;
+		 echo $tabemploi[$i][8];
+		 echo" Se situe à " ;
+		  echo $tabemploi[$i][5];
+		  		 echo", se sent  " ;
+		  echo $tabemploi[$i][6];?></?></h2>
+		<p>  <?php echo $tabemploi[$i][4]?></p>
+		</div>
+		<?php
+	 }
+	 
+	 
+	 ?>
 	 
 	 
 	 </div>
