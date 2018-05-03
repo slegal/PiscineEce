@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mer. 02 mai 2018 à 17:24
+-- Généré le :  jeu. 03 mai 2018 à 14:53
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -129,7 +129,11 @@ CREATE TABLE IF NOT EXISTS `contact` (
 
 INSERT INTO `contact` (`Num_utilisateur`, `Num_ami`) VALUES
 (1, 2),
-(1, 3);
+(2, 1),
+(2, 3),
+(2, 4),
+(3, 2),
+(4, 2);
 
 -- --------------------------------------------------------
 
@@ -325,7 +329,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `Phrase_d_intro` text,
   `Type_user` int(11) NOT NULL,
   PRIMARY KEY (`Num_utilisateur`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `utilisateur`
