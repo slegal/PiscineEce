@@ -48,8 +48,14 @@ require 'fonction_recup-post.php';
 
 	 <div class="col-75">
 		<form action="traitement_ajouter_post.php" method="POST">
+		<select  id="type" name="type">
+		 <option value="texte">Texte</option>
+    <option value="photo">Photo</option>
+    <option value="video">Video</option>
+
+	</select>
 			 <textarea id="location" name="location" placeholder="Endoit où vous vous trouvez..." style="height:20px"></textarea>
-		 <textarea id="type" name="type" placeholder="Type de publication A CHANGER PAR UNE SELECT BOX..." style="height:20px"></textarea>
+	
 		  <textarea id="emotion" name="emotion" placeholder="Comment vous sentez vous?..." style="height:20px"></textarea>
         <textarea id="subject" name="subject" placeholder="Ecrivez quelque chose..." style="height:200px; margin-left:60px "></textarea>
 	
@@ -58,12 +64,7 @@ require 'fonction_recup-post.php';
       </div>
 	</div>
 	 
-	   <div class="publication">
-	 <h2> <?php echo"NOM, PRENOM a publié un TYPE DE PUBLICATION. Se situe à ENDROIT  et se sent EMOTIONS"?></h2>
-	 <p> LA Publication</p>
-	  <h5> <?php echo"Like commentaire publier"?></h5>
-	 </div>
-	 
+
 	 
  <?php $tabemploi=recuppost();
 	 
@@ -80,7 +81,7 @@ require 'fonction_recup-post.php';
 		 echo $tabemploi[$i][8];
 		 echo" Se situe à " ;
 		  echo $tabemploi[$i][5];
-		  		 echo", se sent  " ;
+		  		 echo", à19:59 se sent  " ;
 		  echo $tabemploi[$i][6];?></?></h2>
 		<p>  <?php echo $tabemploi[$i][4]?></p>
 		</div>

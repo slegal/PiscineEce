@@ -15,7 +15,7 @@
 <body>
 <h1>Ajouter un utilisateur</h1>
 <div class="introduction">
-<p> Vous pouvez ajouter un utilisateur sur cette page. Il vous suffit de rentrer son nom, son prénom, son adresse E-mail ainsi que son Mot de passe de l'ece afin de créer son profil 
+<p> Vous pouvez ajouter un utilisateur sur cette page. Il vous suffit de rentrer son nom, son prénom, son adresse E-mail ainsi que son Mot de passe de l'ECE afin de créer son profil 
 sur LinkECE.</p>
 </div>
 
@@ -30,9 +30,9 @@ sur LinkECE.</p>
       </div>
     </div>
    
-    <   <div class="row">
+       <div class="row">
       <div class="col-25">
-        <label for="nom">Prénom</label>
+        <label for="nom">Nom</label>
       </div>
       <div class="col-25">
      <input type="text" id="nom" name="nom"  placeholder="Son nom..." >
@@ -41,7 +41,7 @@ sur LinkECE.</p>
   
 	   <div class="row">
       <div class="col-25">
-        <label for="mail">Prénom</label>
+        <label for="mail">Adresse Email ECE</label>
       </div>
       <div class="col-25">
      <input type="text" id="mail" name="mail"  placeholder="Son adresse-mail de l'ECE..." >
