@@ -10,10 +10,7 @@
 <link href="design_modifier.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="fichier.js"></script>
 
-<?php
-//acces au num de session pour savoir qui est connecte
-echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];      
-?>		
+	
 </head>
 <body>
 <h1>Ajouter un utilisateur</h1>
@@ -23,7 +20,7 @@ sur LinkECE.</p>
 </div>
 
 <div class="container">
-  <form action="Vous_admin.php">
+  <form action="traitement_Ajouter_admin.php" method="post">
     <div class="row">
       <div class="col-25">
         <label for="prenom">Prénom</label>
