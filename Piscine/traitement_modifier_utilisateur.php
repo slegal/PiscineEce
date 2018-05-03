@@ -1,4 +1,4 @@
-<?php 
+<?php session_start();
 
 	$database='linkece';
 	$db_handle=mysqli_connect('localhost', 'root', '');
@@ -7,8 +7,7 @@
   
 if($db_found) {
     
-    $sql =  "INSERT INTO utilisateur (Num_utilisateur, Nom, Prenom, Mot_de_passe, Adresse_email, Pseudo, Lien_photo_couverture, Description, Phrase_d_intro, Type_user) 
- VALUES('0','".$_POST["nom"]."','".$_POST["prenom"]."','0','".$_POST["mail"]."','0','0','0','0','0')";
+    $sql =  "UPDATE utilisateur SET Description ='".$_POST["description"]."', Phrase_d_intro ='".$_POST["introduction"]."' WHERE Num_utilisateur ='".$_SESSION["Num_utilisateur"]."' ";
     
    echo $sql;
     

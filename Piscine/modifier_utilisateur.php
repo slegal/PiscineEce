@@ -10,10 +10,7 @@
 <link href="design_modifier.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="fichier.js"></script>
 
-<?php
-//acces au num de session pour savoir qui est connecte
-echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];      
-?>		
+		
 </head>
 <body>
 <h1>Modifier le profil</h1>
@@ -23,7 +20,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 </div>
 
 <div class="container">
-  <form action="Vous.php">
+  <form action="traitement_modifier_utilisateur.php" method="post">
     <div class="row">
       <div class="col-25">
         <label for="fname">Phrase d'introduction</label>
@@ -38,7 +35,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
         <label for="subject">Description</label>
       </div>
       <div class="col-75">
-        <textarea id="descrpition" name="Description" value=""  style="height:200px"> <?php echo $_SESSION['Description']?></textarea>
+        <textarea id="descrpition" name="description" value=""  style="height:200px"> <?php echo $_SESSION['Description']?></textarea>
       </div>
     </div>
   
