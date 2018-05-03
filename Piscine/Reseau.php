@@ -1,3 +1,9 @@
+<?php
+session_start();
+require 'fonction_recup-amis.php';
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -69,22 +75,29 @@
 	 </div>
 	 <div class="gauche">
 	 <h3>Mes amis</h3>
-	 
+	 <?php ?>
+	 <?php $tabami=recupami(); 
+
+	 for ($i = 0; $i < sizeof($tabami);$i++) ///NOMBRE DE DIV A FAIRE
+	 {
+	?>
 	  <div class="amis">
-	 <h4> Prenom, Nom, adresse mail</h4>
-	 <p>Introduction de la personne</p>
+	 <h4> <?php  echo "";
+	  echo $tabami[$i][2] ;///PRENOM;
+	 echo " ";
+	 echo $tabami[$i][1] ;///NOM;
+	 echo " ";
+	 echo $tabami[$i][3] ;///ADRESSE EMAIL;
+	  ?></h4>
+	 <p><?php $tabami[$i][4]?></p>
 	 <div class="photo">
-	 <p>photo</p>
+	 <p><?php echo '<img src="'.$tabami[$i][5].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
 	 </div>
 	 </div>
+	 <?php
+	 }
+	?>
 	 
-	  <div class="amis">
-	 <h4> Prenom, Nom, adresse mail</h4>
-	 <p>Introduction de la personne</p>
-	 <div class="photo">
-	 <p>photo</p>
-	 </div>
-	 </div>
 	 </div>
 
 	 
