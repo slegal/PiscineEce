@@ -54,7 +54,7 @@ require 'fonction_recup-emploi.php';
 	 <div class="col-75">
 	 <form>
 	  <textarea id="intitule_offre" name="intitule_offre" placeholder="Intitule de votre offre d'emploi..." style="height:20px"></textarea>
-        <textarea id="description_offre" name="description offre" placeholder="Decrivez votre offre d'emploi..." style="height:180px"></textarea>
+        <textarea id="description_offre" name="description offre" placeholder="Decrivez votre offre d'emploi..." style="height:180px;margin-left:60px"></textarea>
 		 <input class="button" type="submit" value="publier" /> 
 		</form>
       </div>
@@ -70,7 +70,7 @@ require 'fonction_recup-emploi.php';
 		echo $tabemploi[$i][4]; ///NOM
 		echo " ";
 		echo $tabemploi[$i][5];///PRENOM
-		echo" a ajouté une offre d'emploi : " ;
+		echo" a ajouté une offre d'emploi :" ;
 		 echo $tabemploi[$i][3];?></h2>
 		<p>  <?php echo $tabemploi[$i][1]?></p>
 		</div>

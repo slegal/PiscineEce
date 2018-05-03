@@ -8,8 +8,8 @@ nav li
 {
 	margin-top:35px;
 
- margin-left:25px;
- margin-bottom:40px;
+
+ margin-left:3%;
  float:left; /*pour IE*/
  }
 
@@ -19,27 +19,22 @@ nav li
 	margin-right:30px;
 }
 
-.bandegauche
-{
-	float:left;
-	background-color:#FFE4C4;
-	height:1500px;
-	width:70px;
-}
 
 
 nav a
 {
-	 text-align:center;
+ text-align:center;
     font-size: 1.3em;
     color: white;
     padding-bottom: 8px;
 	padding-top: 8px;
+	padding-left:5px;
+padding-right:5px;
 	
     text-decoration: none;
 	border: 2px solid black;
-    padding-right: 15px;
-	 padding-left: 15px;
+	border-radius:5px;
+width:11%;
     background-color: rgb(0, 113, 121);
 	opacity: 1;
 }
@@ -59,34 +54,41 @@ nav{
 }
 
 .tete{
-	padding-bottom:115px;
+		padding-bottom:115px;
 	background-color: rgb(3, 160, 160,0.5);
 	border: 2px solid black;
+	width:100%;
+	border-radius:4px;
 	
 }
 
 .contenu{
 	
-	margin-top:10px;
+border-radius:4px;
+	margin-top:25px;
 	background-color: rgba(3, 160, 160,0.5);
 	border: 2px solid black;
-	padding-bottom:50%;
+	padding-bottom:10px;
+	 
+    margin-right: auto;
+    margin-left: auto;
+ 
+	width:100%;
 }
 
 h1{
 text-align:center;
 	   background-color: rgb(0, 113, 121);
-	    padding-bottom: 8px;
-	padding-top: 8px;
 	
+		
     text-decoration: none;
 	border: 2px solid black;
-    padding-right: 2px;
-	 padding-left: 2px;
-	
-margin-top:20px;
- margin-left:520px;
- margin-right:520px;
+	border-radius: 4%;
+
+	width:40%;
+
+ margin-left:auto;
+ margin-right:auto;
  color:white;
 }
 input[type=text] {
@@ -109,8 +111,7 @@ input[type=text]:focus {
     width: 600px;
 }
 form{
-	margin-left:20px;
-	float: left;
+
 	margin-top:0px;
 }
 
@@ -120,15 +121,14 @@ text-align:center;
     text-decoration: none;
 	border: 2px solid black;
 	border-radius:5px;
-  width:1125px;
+  width:80%;
   height:50px;
 margin-top:10px;
- margin-left:100px;
- margin-right:100px;
+margin-left:auto;
+margin-right:auto;
 }
 
 .description{
-	
 	   background-color: rgb(0, 113, 121);
 	    width:650px;
 		height:180px;
@@ -145,7 +145,7 @@ margin-bottom:20px;
 .photo_profil{
 
 margin-top:0px;
- margin-left:200px;
+ margin-left:15%;
  float: left;
 
 
@@ -156,30 +156,32 @@ img:hover {
 .experiences{
 	
 	
-text-align:center;
-	   background-color: rgb(0, 113, 121);
-    text-decoration: none;
-	border: 2px solid black;
-width:925px;
-padding-bottom:15px;
-
-margin-top:250px;
- margin-left:200px;
- margin-right:200px;
-}
-
-.notification{
 	
 text-align:center;
 	   background-color: rgb(0, 113, 121);
     text-decoration: none;
 	border: 2px solid black;
-width:925px;
-height: 100px;
+width:70%;
+padding-bottom:15px;
+
+margin-top:250px;
+ margin-left:auto;
+ margin-right:auto;
+}
+
+.notification{
+	
+	
+text-align:center;
+	   background-color: rgb(0, 113, 121);
+    text-decoration: none;
+	border: 2px solid black;
+width:70%;
+padding-bottom:15px;
 
 margin-top:25px;
- margin-left:200px;
- margin-right:200px;
+ margin-left:auto;
+ margin-right:auto;
 }
 .competences{
 	
@@ -190,32 +192,30 @@ text-align:center;
 	
     text-decoration: none;
 	border: 2px solid black;
-width:925px;
-height: 100px;
+width:70%;
+padding-bottom:15px;
 margin-top:20px;
- margin-left:200px;
- margin-right:200px;
-
+ margin-left:auto;
+ margin-right:auto;
 }
 
 
 
 .emploi{
-	
 text-align:center;
 	   background-color: rgb(0, 113, 121);
 
 	
-	width:925px;
-height: 100px;
+	width:70%;
+padding-bottom:15px;
     text-decoration: none;
 	border: 2px solid black;
    
 
 
 margin-top:20px;
- margin-left:200px;
- margin-right:200px;
+ margin-left:auto;
+ margin-right:auto;
 
 
 }
@@ -224,17 +224,19 @@ margin-top:20px;
 	   background-color: rgb(0, 113, 121);
 
 	
-	width:925px;
-height: 100px;
+	width:70%;
+padding-bottom:15px;
     text-decoration: none;
 	border: 2px solid black;
    
 
 
 margin-top:20px;
- margin-left:200px;
- margin-right:200px;
+ margin-left:auto;
+ margin-right:auto;
 }
+
+
 
 .formation{
 	
@@ -242,16 +244,35 @@ text-align:center;
 	   background-color: rgb(0, 113, 121);
 
 	
-	width:925px;
-height: 100px;
+	width:70%;
+padding-bottom: 15px;
     text-decoration: none;
 	border: 2px solid black;
    
 
 
 margin-top:20px;
- margin-left:200px;
- margin-right:200px;
+ margin-left:auto;
+ margin-right:auto;
+
+}
+
+.interet{
+	
+text-align:center;
+	   background-color: rgb(0, 113, 121);
+
+	
+	width:70%;
+padding-bottom: 15px;
+    text-decoration: none;
+	border: 2px solid black;
+   
+
+
+margin-top:20px;
+ margin-left:auto;
+ margin-right:auto;
 
 }
 h2{
@@ -288,10 +309,12 @@ h3{
 .gauche{
 	margin-top:40px;
 	text-align:center;
-    text-decoration: none;
- margin-left:30px;
+width: 35%;
+ margin-left:10%;
  float: left;
+ 
 }
+
 
 h4{
 	
@@ -300,14 +323,16 @@ h4{
 }
 .nvamis{
 	 background-color: rgb(0, 113, 121);
-	 float:center;
+	 
 	 border: 2px solid black;
 	
 
-    width: 350px;
-height: 180px;
-margin-left:60px;
+    width: 90%;
+padding-bottom:15px;
+margin-left:auto;
+margin-right:auto;
 margin-top:10px;
+margin-bottom:10px;
 
 }
 .publier{
@@ -315,40 +340,41 @@ margin-top:10px;
 	   background-color: rgb(0, 113, 121);
     text-decoration: none;
 	border: 2px solid black;
-width:925px;
-height: 330px;
+width:70%;
+height: 350px;
 
 margin-top:25px;
- margin-left:200px;
- margin-right:200px;
+ margin-left:auto;
+ margin-right:auto;
+ padding-bottom:20px;;
 }
 
 .amis{
 	margin-top:10px;
 	 background-color: rgb(0, 113, 121);
-	 float:center;
+
 	 border: 2px solid black;
 	
+margin-right:auto;
+margin-left:auto;
 
-    width: 550px;
-height: 200px;
 
 }
 
 .droite{
-	    overflow: auto;
+
 
 	margin-top:40px;
 	text-align:center;
 	   background-color: rgb(90, 230, 230,1);
     text-decoration: none;
 	border: 2px solid black;
-    width: 500px;
-height: 300px;
+    width:40%;
 
 
- margin-right:100px;
- float: right;
+margin-left:50%;
+
+ 
 }
 @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
@@ -356,14 +382,16 @@ height: 300px;
         margin-top: 0;
     }
 }
- textarea {
-    width: 850px;
-	height:200px;
-    padding: 12px;
+  textarea {
+    width: 65%;
+
+    margin-left:auto;
+	margin-right: auto;
     border: 1px solid black;
     border-radius: 4px;
     resize: vertical;
 	background-color:#E0FFFF;
+	margin-bottom:20px;
 }
 .button{
     padding-bottom:10px;

@@ -42,7 +42,7 @@
 	<h2> Vous souhaitez publier quelque chose? </h2>
 	 <div class="col-75">
 	 <form>
-        <textarea id="subject" name="subject" placeholder="Ecrivez quelque chose..." style="height:200px"></textarea>
+        <textarea id="subject" name="subject" placeholder="Ecrivez quelque chose..." style="height:200px "></textarea>
 		 <input class="button" type="submit" value="publier" /> 
 		</form>
       </div>
