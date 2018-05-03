@@ -2,7 +2,7 @@
 /* Ci-dessous, la fonction qui prend en parametre le Num_utilisateur et 
 affiche les emploi de l'utilisateur */
 
-function recupami()
+function recuppersonne()
 {
 	$database='linkece';
 	$db_handle=mysqli_connect('localhost', 'root', '');
@@ -13,42 +13,84 @@ function recupami()
     if($db_found) {
 		
 
+		$tabfinal=array();
 		
 		
-		
-		$sql = "SELECT* FROM contact WHERE Num_utilisateur= $data"; ///REQUETE SQL POUR AVOIR LA TABLE EMPLOI
+		$sql = "SELECT* FROM contact WHERE Num_utilisateur != $data AND Num_ami != $data "; ///REQUETE SQL POUR AVOIR LA TABLE EMPLOI OU YA PAS LA PERSONNE CONNECTE
         $result = mysqli_query($db_handle, $sql) or die(mysql_error())  ;
         
+        		
+		$sql3 = "SELECT* FROM contact WHERE Num_utilisateur= $data"; ///REQUETE SQL POUR AVOIR LA TABLE EMPLOI
+        $result = mysqli_query($db_handle, $sql3) or die(mysql_error())  ;
 
 
         $p=0; ///VALEUR PERMETTANT D INCREMENTER LES LIGNES
         $taille=0;
+        $ok=0;
+        $stop=0;
       
         foreach  ($db_handle->query($sql) as $row) {
 
-                $tabami[$taille][0] = $row['Num_ami'];
-         
-              
 
 
+                $tabpersonne[$taille][0] = $row['Num_utilisateur'];
+                $tabpersonne[$taille][6] = $row['Num_ami'];
+                $taille++;
+
+
+            }
+
+                         
+
+            foreach  ($db_handle->query($sql3) as $row) {
+
+                $tabami[$p][0] = $row['Num_ami'];
+                $p++;
+
+            }
+
+            for ($i = 0; $i < sizeof($tabpersonne);$i++) 
+            {
+                $stop=0;
+                for ($g = 0; $g < sizeof($tabami);$g++)
+                {
+                    if($tabpersonne[$i][0]== $tabami[$g][0]&& $stop!=1)
+                    {
+                       // $tabfinal[]=$tabpersonne[$i][0];
+                       $stop=1;///SI EXISTE DANS AMIS ALORS ON STOP
+                    }
+                    
+                }
+
+                if($stop!=1) ///SIP AS STOP ALORS ON PUSH
+                {
+                    $tabfinal[$ok][0]=$tabpersonne[$i][0];
+                    
              ////DEUXIEMEBOUCLE
-            $tmpNom=$row['Num_ami'];
+            $tmpNom=$tabfinal[$ok][0];
 
             $sql2 = "SELECT * FROM utilisateur WHERE Num_utilisateur=$tmpNom"; ///REQUETE SQL POUR AVOIR LE NOM EN PASSANT PAR EMPLOI
             $result = mysqli_query($db_handle, $sql2) or die(mysql_error())  ;
 
             foreach  ($db_handle->query($sql2) as $row) {
 
-                $tabami[$taille][1] = $row['Nom']; ///LA 4eme CASE DU TABLEAU CONTIENT LE NOm
-                $tabami[$taille][2] = $row['Prenom']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
-                $tabami[$taille][3] = $row['Adresse_email']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
-                $tabami[$taille][4] = $row['Description']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
-                $tabami[$taille][5] = $row['Lien_photo_profil']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
+                $tabfinal[$ok][1] = $row['Nom']; ///LA 4eme CASE DU TABLEAU CONTIENT LE NOm
+                $tabfinal[$ok][2] = $row['Prenom']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
+                $tabfinal[$ok][3] = $row['Lien_photo_profil']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
               
-                $taille ++;
+                $ok ++;
 
             }
-        }
+                }
+                
+            }
+
+              
+
+
+
+            
+    
 
 
 		/*
@@ -94,21 +136,38 @@ function recupami()
             */
                     
             
-/*     
+ /*  
 ///AFFICHAGE 2D
 //Boucle d'affichage
-for ($i = 0; $i < $taille;$i++)
+for ($i = 0; $i < sizeof($tabpersonne);$i++)
 {
 	?></br><?php
 
+echo $tabpersonne[$i][0];
+
+echo $tabpersonne[$i][6];
+
+
+}
+
+for ($i = 0; $i < sizeof($tabami);$i++)
+{
+	?></br><?php
+echo "tabami";
 echo $tabami[$i][0];
-echo $tabami[$i][1];
-echo $tabami[$i][2];
-echo $tabami[$i][3];
-echo $tabami[$i][4];
-echo $tabami[$i][5];
+
+}
+
+
+for ($i = 0; $i < sizeof($tabfinal);$i++)
+{
+	?></br><?php
+echo "tabfinal";
+echo $tabfinal[$i][1];
+
 }
 */
+
 
 		
 		}
@@ -117,7 +176,7 @@ echo $tabami[$i][5];
 	mysqli_close($db_handle);
 		
 			
-      return $tabami;  }
+  return $tabfinal; }
 				
 
 ?>

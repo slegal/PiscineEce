@@ -1,6 +1,7 @@
 <?php
 session_start();
 require 'fonction_recup-amis.php';
+require 'fonction_recup-personne.php';
 
 ?>
 
@@ -55,7 +56,6 @@ require 'fonction_recup-amis.php';
 </div>
 	  <div class="gauche">
 	 <h3>Mes amis</h3>
-	 <?php ?>
 	 <?php $tabami=recupami(); 
 
 	 for ($i = 0; $i < sizeof($tabami);$i++) ///NOMBRE DE DIV A FAIRE
@@ -82,21 +82,27 @@ require 'fonction_recup-amis.php';
 
 	 <div class="droite">
 	  	 <h3> Proposition de nouvelles relations</h3>
-	 	   <div class="nvamis">
+	 	  
+			<?php $tabpersonne= recuppersonne() ;
+			
+			for ($i = 0; $i < sizeof($tabpersonne);$i++) ///NOMBRE DE DIV A FAIRE
+			{
+				?>
+				<div class="nvamis">
+				<p>	<?php echo $tabpersonne[$i][2];
+				echo " ";
+				echo $tabpersonne[$i][1];
+				?></p>
+				<div class="photo">
+				<p><?php echo '<img src="'.$tabpersonne[$i][3].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
+				</div>
+				</div>
+				<?php
+			}
+		   ?>
 	 <h4> </h4>
+	
 
-	 <p>Introduction de la personne</p>
-	 <div class="photo">
-	 <p>photo</p>
-	 </div>
-	 </div>
-	   <div class="nvamis">
-	 <h4> Prenom, Nom, adresse mail</h4>
-	 <p>Introduction de la personne</p>
-	 <div class="photo">
-	 <p>photo</p>
-	 </div>
-	 </div>
 	 </div>
 	
 
