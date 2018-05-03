@@ -8,7 +8,7 @@
 if($db_found) {
     
     $sql =  "INSERT INTO emploi (Num_emploi, Num_utilisateur, Description, Date_creation, Titre) 
- VALUES('0',".$_SESSION['Num_utilisateur'].",'".$_POST["description_offre"]."','2013-12-01','".$_POST["intitule_offre"]."')";
+ VALUES('0',".$_SESSION['Num_utilisateur'].",'".$_POST["description_offre"]."',NOW(),'".$_POST["intitule_offre"]."')";
     
    echo $sql;
     
