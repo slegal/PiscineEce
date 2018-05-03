@@ -40,6 +40,7 @@
 	
 	<div class="publier">
 	<h2> Vous souhaitez publier quelque chose? </h2>
+	<form action="traitement_ajouter_emploi.php" method="post">
 	 <div class="col-75">
 	 <form>
         <textarea id="subject" name="subject" placeholder="Ecrivez quelque chose..." style="height:200px "></textarea>
@@ -55,14 +56,7 @@
 	 </div>
 	 
 	 
-	   <div class="formation">
-	 <h2>Ma Formation</h2>
-	 <p> Aller chercher la phrase d'intro</p>
-	 </div>
-	   <div class="competences">
-	 	 <h2>Mes Compétences</h2>
-	 <p> Aller chercher la phrase d'intro</p>
-	 </div>
+	
 	 
 	 
 	 </div>

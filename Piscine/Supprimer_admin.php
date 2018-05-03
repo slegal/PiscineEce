@@ -1,5 +1,8 @@
 
-<?php session_start(); ?>
+<?php session_start();
+require 'fonction_recup-utilisateur.php'; 
+;
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -22,30 +25,26 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
 </div>
 
 <div class="container">
-  <form action="Vous_admin.php">
+  <form action="traitement-Supprimer_admin.php" method="POST">
    <div class="col-25">
            <label for="supprimer">Veuillez selectionner l'utilisateur que vous souhaitez supprimer:</label>
 	  </div>
    <div class="col-25">
      
-  <select name="cars" size="4">
-    <option value="volvo">Nom prenom de la personne</option>
-    <option value="saab">Saab</option>
-    <option value="fiat">Fiat</option>
-    <option value="audi">Audi</option>
-  </select>
-  </div>
-  <br><br>
- 
-    
 
+ <?php $tabami=recuputilisateur(); ?>
+<input id="personne" name="personne" type="number" > choisir le num d'utilisateur à supprimer</input>
   
+
  
- 
+   </div>
      <div class="row">
       <input type="submit" value="Valider">
+	  
     </div>
+	 </div>
   </form>
+
 </div>
 
 </body>
