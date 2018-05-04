@@ -21,6 +21,12 @@ nav li
 }
 
 
+.bin,.plus{
+	float:right;
+	margin-top:1%;
+	margin-right:1%;
+}
+
 
 nav a
 {
@@ -83,7 +89,7 @@ text-align:center;
 		
     text-decoration: none;
 	border: 2px solid black;
-	border-radius: 4%;
+
 
 	width:40%;
 

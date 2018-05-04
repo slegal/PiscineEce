@@ -2,6 +2,7 @@
 session_start();
 require 'fonction_recup-amis.php';
 require 'fonction_recup-personne.php';
+require 'traitement_eux.php';
 
 
 ?>
@@ -65,20 +66,25 @@ require 'fonction_recup-personne.php';
 		$_SESSION['tmp2']= $tabami[$i][6];
 	?>
 	  <div class="amis">
-	  		<div class="crayon">
-				<a href="fonction_enlever_amis.php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
+	  		<div class="bin">
+				<a href="fonction_enlever_amis.php"> <img src="bin.jpg" width="50" height="50" alt"bin"></a>
 	 			</div>
-	 <h4> <?php  echo "";
+	 <h4> <?php 
+	  echo "";
 	  echo $tabami[$i][2] ;///PRENOM;
 	 echo " ";
 	 echo $tabami[$i][1] ;///NOM;
 	 echo " ";
 	 echo $tabami[$i][3] ;///ADRESSE EMAIL;
-	  ?></h4>
+
+	  ?>	 </h4>
 	 <p><?php $tabami[$i][4]?></p>
 	 <div class="photo">
 	 <p><?php echo '<img src="'.$tabami[$i][5].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
 	 </div>
+	 <form>
+	     <input type="submit" name="insert" value="insert" onclick="fonction_recup_eux($tabami[$i][1] ,$tabami[$i][2] )" />
+	 </form>
 	 </div>
 	 <?php
 	 }
@@ -97,14 +103,14 @@ require 'fonction_recup-personne.php';
 
 				?>
 				<div class="nvamis">
-				<div class="crayon">
-				<a href="fonction_ajout_amis.php"> <img src="plus.png" width="60" height="60" alt"crayon modifier"></a>
+				<div class="plus">
+				<a href="fonction_ajout_amis.php"> <img src="plus.png" width="44" height="44" alt"plus"></a>
 	 			</div>
-				<p>	<?php echo $tabpersonne[$i][2];
+				<p><?php echo $tabpersonne[$i][2];
 				echo " ";
 				echo $tabpersonne[$i][1];
 				?></p>
-				<div class="photo">
+			 	<div class="photo">
 				<p><?php echo '<img src="'.$tabpersonne[$i][3].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
 				</div>
 				</div>

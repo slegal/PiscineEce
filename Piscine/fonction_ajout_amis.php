@@ -21,7 +21,7 @@ affiche les experiences de l'utilisateur */
         ///REQUETE SQL
         $result = mysqli_query($db_handle, $sql) or die(mysql_error())  ;
         $result = mysqli_query($db_handle, $sql2) or die(mysql_error())  ;
-	
+			header('Location: Reseau.php');
 		
 		}
     else { echo "Base de données non trouvée."; }
