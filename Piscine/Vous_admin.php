@@ -1,4 +1,15 @@
-<?php session_start(); ?>
+<?php 
+session_start(); //permet d'acceder aux infos de l'utilisateur recuperee dans verif_mp_email
+require 'fonction_recup-exp.php';
+require 'fonction_recup-comp-suivie.php';
+require 'fonction_recup-comp.php';
+require 'fonction_recup-interet-suivi.php';
+require 'fonction_recup-interet.php';
+require 'fonction_recup-form-suivie.php';
+require 'fonction_recup-form.php';
+
+?>
+
 <!DOCTYPE>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
@@ -36,7 +47,7 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
 </div>
 <div class="contenu">
 	  <div class="crayon">
-	<a href="modifier?php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
+	<a href="modifier_utilisateur.php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
 	 </div>
 	 <h1> VOUS</h1>
 	 
@@ -55,18 +66,24 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
 	 </div>
 	 
 	   <div class="experiences">
-	 <h2>Mes Expériences</h2>
-	 <p> A remplir </p>
+	 <h2>Mes Experiences</h2>
+	 <p> <?php recupexp($_SESSION['Num_utilisateur']) ?> </p>
 	 </div>
 	 
 	 
 	   <div class="formation">
-	 <h2>Ma Formation</h2>
-	 <p> A remplir </p>
+	 <h2>Mes Formation</h2>
+
+	 <p> <?php recupform(recupformsuivie($_SESSION['Num_utilisateur']))?></p>
 	 </div>
 	   <div class="competences">
 	 	 <h2>Mes Compétences</h2>
-	 <p> <?php echo '<p>'.$_SESSION['Phrase_d_intro'].'</p>'?></p>
+	 <p><?php recupcomp(recupcompsuivie($_SESSION['Num_utilisateur']))?></p>
+	 </div>
+	 
+	 	   <div class="interet">
+	 	 <h2>Mes centres d'interet </h2>
+	 <p> <?php recupinteret(recupinteretsuivi($_SESSION['Num_utilisateur']))?></p>
 	 </div>
 	 
 	 

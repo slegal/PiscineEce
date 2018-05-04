@@ -1,3 +1,6 @@
+<?php 
+require 'fonction_recup-post.php';
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -33,25 +36,27 @@
 <div class="contenu">
 	 
 	 <h1> MES NOTIFICATIONS</h1>
-	 
-	 
-	  <div class="introduction">
-	 <p> Vos dernières notifications </p>
-	 </div>
 	
-	   <div class="notification">
-	 <h2><?php echo "Nom, prenom a publié TYPE DE CONTENU" ?></h2>
-	 <p> Aller chercher la phrase d'intro</p>
-	 </div>
+  <div class="introduction">
+	 <p> Vos dernières notifications </p>
+	 </div>	
+ <?php $tabemploi=recuppost();
 	 
-	  <div class="notification">
-	 <h2><?php echo "Nom, prenom a publié TYPE DE CONTENU" ?></h2>
-	 <p> Aller chercher la phrase d'intro</p>
+	 for ($i = sizeof($tabemploi)-1; $i > -1;$i--) ///NOMBRE DE DIV A FAIRE
+	 {
+		 
+		 ?>
+		<div class="notification">
+		<?php
+		echo $tabemploi[$i][10]; ///NOM
+		echo " ";
+		echo $tabemploi[$i][9];///PRENOM
+		echo" a publié un post de type " ;
+		echo $tabemploi[$i][8];
+		 ?>
 	 </div>
-	  <div class="notification">
-	 <h2><?php echo "Nom, prenom a publié TYPE DE CONTENU" ?></h2>
-	 <p> Aller chercher la phrase d'intro</p>
-	 </div>
+	<?php }
+			?>
 	 
 	 
 	 </div>

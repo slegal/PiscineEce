@@ -15,7 +15,7 @@ require 'fonction_recup-utilisateur.php';
 
 <?php
 //acces au num de session pour savoir qui est connecte
-echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];      
+
 ?>		
 </head>
 <body>
@@ -32,7 +32,7 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
    <div class="col-25">
      
 
- <?php $tabami=recuputilisateur(); ?>
+
 <input id="personne" name="personne" type="number" > choisir le num d'utilisateur à supprimer</input>
   
 
@@ -42,9 +42,11 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
       <input type="submit" value="Valider">
 	  
     </div>
+	     <a href="Accueil_admin.php">   Retour</a>
 	 </div>
+	
   </form>
-
+ 
 </div>
 
 </body>

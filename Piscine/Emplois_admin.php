@@ -1,3 +1,9 @@
+<?php 
+require 'fonction_recup-emploi.php';
+?>
+
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -47,20 +53,39 @@
 	 <input class="button" type="submit" value="publier" /> 
 	</form>
 </div>
+<div class="publier">
+	<h2> Vous souhaitez publier une offre d'emploi? </h2>
+	 <div class="col-75">
+	 <form action="traitement_ajouter_emploi_admin.php" method="POST">
+	  <textarea input id="intitule_offre" name="intitule_offre" placeholder="Intitule de votre offre d'emploi..." style="height:20px"></textarea>
+        <textarea id="description_offre" name="description_offre" placeholder="Decrivez votre offre d'emploi..." style="height:180px;margin-left:60px"></textarea>
+		 <input class="button" type="submit" value="publier" /> 
+		</form>
+      </div>
+	</div>
+	 <?php $tabemploi=recupemploi();
+	 
+	 for ($i = sizeof($tabemploi)-1; $i > -1;$i--) ///NOMBRE DE DIV A FAIRE
+	 {
+		 
+		 ?>
+		<div class="emploi">
+		<h2><?php
+		echo $tabemploi[$i][4]; ///NOM
+		echo " ";
+		echo $tabemploi[$i][5];///PRENOM
+		echo" a ajouté une offre d'emploi : " ;
+		 echo $tabemploi[$i][3];
+		 echo " le ";
+		 echo $tabemploi[$i][2];
+		 ?></h2>
+		<p>  <?php echo $tabemploi[$i][1]?></p>
+		</div>
+		<?php
+	 }
 	 
 	 
-	   <div class="emploi">
-	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
-	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
-	 </div>
-	 
-	 
-	   <div class="emploi">
-	 <h2><?php echo"Nom, prenom ajoute une offre d'emploi: poste proposé à aller chercher dans la base"?></h2>
-	 <p>  <?php echo "Description de l'offre d'emploi à aller chercher dans la base données"?></p>
-	 </div>
-	 
-	 
+	 ?>
 	 
 	 </div>
 </body>

@@ -50,9 +50,16 @@ sur LinkECE.</p>
 
      <div class="row">
       <input type="submit" value="Valider">
+	  
     </div>
   </form>
+  <form>
+     <a href="Accueil_admin.php">   Retour</a>
+	 </form>
+  
+
 </div>
+
 
 </body>
 </html>

@@ -12,13 +12,16 @@ if($db_found) {
     $sql2 =  " DELETE FROM contact WHERE Num_utilisateur = ".$_POST["personne"]."";
 
     $sql3 =  " DELETE FROM contact WHERE Num_ami = ".$_POST["personne"]."";
+	$sql4 =  " DELETE FROM post WHERE Num_utilisateur = ".$_POST["personne"]."";
     
    echo $sql;
     
     $result = mysqli_query($db_handle, $sql);  
     $result = mysqli_query($db_handle, $sql2);  
     $result = mysqli_query($db_handle, $sql3);  
-    
+     $result = mysqli_query($db_handle, $sql4);  
+		
+	header('Location: Accueil_admin.php');
     }
     
     else { echo "Base de données non trouvée."; }
