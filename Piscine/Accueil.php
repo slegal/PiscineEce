@@ -47,13 +47,14 @@ require 'fonction_recup-post.php';
 	<h2> Vous souhaitez publier quelque chose? </h2>
 
 	 <div class="col-75">
-		<form action="traitement_ajouter_post.php" method="POST">
+		<form action="traitement_ajouter_post.php" method="POST" enctype="multipart/form-data" >
 		<select  id="type" name="type">
 		 <option value="texte">Texte</option>
     <option value="photo">Photo</option>
     <option value="video">Video</option>
 
 	</select>
+
 			 <textarea id="location" name="location" placeholder="Endoit où vous vous trouvez..." style="height:20px"></textarea>
 	
 		   
@@ -74,8 +75,8 @@ require 'fonction_recup-post.php';
     <option value="colere">En colère</option>
 
 	</select>
-        <textarea id="subject" name="subject" placeholder="Ecrivez quelque chose..." style="height:200px; margin-left:60px "></textarea>
-	
+        <textarea id="subject" name="subject" placeholder="Ecrivez quelque chose..." style="height:200px; margin-left:60px "></textarea></br>
+		<input type="file" name="monfichier" /></br>
 		 <input class="button" type="submit" value="publier" /> 
 		</form>
       </div>
@@ -94,13 +95,36 @@ require 'fonction_recup-post.php';
 		echo $tabemploi[$i][10]; ///NOM
 		echo " ";
 		echo $tabemploi[$i][9];///PRENOM
-		echo" a publié un post de type" ;
+		echo" a publié un post de type " ;
 		 echo $tabemploi[$i][8];
-		 echo" Se situe à " ;
-		  echo $tabemploi[$i][5];
-		  		 echo", se sent  " ;
+		echo" Se situe à " ;
+		echo $tabemploi[$i][5];
+		echo", se sent  " ;
 		  echo $tabemploi[$i][6];?></?></h2>
-		<p>  <?php echo $tabemploi[$i][4]?></p>
+		<p>  <?php if($tabemploi[$i][8]=="photo")
+		{
+			 echo '<img src="'.$tabemploi[$i][4].'" width="190" height="190" alt"photo_de_profil"/>';
+		}
+
+		if($tabemploi[$i][8]=="video")
+		{
+			?>
+	<video width="320" height="240" controls autoplay>
+  
+  <source src="<?php echo $tabemploi[$i][4] ?>" type="video/mp4">
+  Sorry, your browser doesn't support the video element.
+</video>
+<?php
+		}
+		?>
+		<?php if($tabemploi[$i][8]=="texte")
+		{
+echo $tabemploi[$i][4];
+		}
+		?>
+		
+		
+		</p>
 		</div>
 		<?php
 	 }
