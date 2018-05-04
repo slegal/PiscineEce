@@ -4,7 +4,7 @@ Affiche la description qui correspond */
 function recupinteret($arr)
 {
 	$database='linkece';
-	$db_handle=mysqli_connect('localhost', 'root', 'p21');
+	$db_handle=mysqli_connect('localhost', 'root', '');
 	$db_found=mysqli_select_db($db_handle,$database);
 	
     if($db_found) {

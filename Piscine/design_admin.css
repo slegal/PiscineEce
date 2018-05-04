@@ -62,17 +62,36 @@ border-radius:10px;
 	
 }
 
+
 .contenu{
 
+			 background-color: rgb(3, 160, 160,0.5);
+
 	margin-top:25px;
-	background-color: rgba(3, 160, 160,0.5);
+
 	border: 2px solid black;
-	padding-bottom:10%;
+	padding-bottom:40%;
 	 
     margin-right: auto;
     margin-left: auto;
  border-radius:10px; 
 	width:100%;
+}
+.photo_couv{
+
+	background-position:center top;
+    background-image: url(couv.jpg);
+		background-repeat:no-repeat;
+		
+
+	
+
+	 
+    margin-right: auto;
+    margin-left: auto;
+
+	width:100%;
+	height:100%;
 }
 
 h1{

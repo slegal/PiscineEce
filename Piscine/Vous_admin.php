@@ -45,7 +45,11 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
 	 </header>
 	 
 </div>
+
 <div class="contenu">
+	 <div class="photo_couv">
+
+	
 	  <div class="crayon">
 	<a href="modifier_utilisateur.php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
 	 </div>
@@ -89,6 +93,6 @@ echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];
 	 
 	 </div>
 	 
-	
+		  </div>
 </body>
 </html> 
