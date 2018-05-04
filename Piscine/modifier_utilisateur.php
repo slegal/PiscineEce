@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php session_start(); 
+require 'fonction_recup-expbis.php'?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
@@ -59,19 +61,19 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
   
 	 <div class="row">
 	    <div class="col-25">
-	  <label for="input1">Experience  </label> 
+	  <label for="input1">Experience  </label> <?php $tabexp=recupexpbis($_SESSION['Num_utilisateur']); ?>
 	  	<img src="plus.png" width="30" height="30" alt"plus">
 	  </div>
 	  <div class="col-60">
-       <input type="text" id="entreprise" name="entreprise" >
+       <input type="text" id="entreprise" name="entreprise" value="<?php echo $tabexp[sizeof($tabexp)-1][1] ?>" >
 	  </div>
-	<p>  Entreprise</p>
+	<p>  Entreprise</p> 
  </div>
      <div class="row">
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="text" id="poste" name="poste" >
+       <input type="text" id="poste" name="poste"  value="<?php echo $tabexp[sizeof($tabexp)-1][4] ?>">
    </div>
    <p> Poste occupe</p>
       </div>
@@ -79,7 +81,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="date" id="date debut" name="dD" >
+       <input type="date" id="date debut" name="dD"  value="<?php echo $tabexp[sizeof($tabexp)-1][2] ?>">
    </div>
    <p> Date de début</p>
       </div>
@@ -87,7 +89,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="date" id="date fin" name="dF" >
+       <input type="date" id="date fin" name="dF"  value="<?php echo $tabexp[sizeof($tabexp)-1][3] ?>">
 	   </div>
 	   <p> Date de fin</p>
 

@@ -10,10 +10,10 @@ require 'fonction_ajout-interet.php';
 
 ///AJOUT INFO PERSO
 //recuperation des champs de la premiere partie : SI REMPLIS ...a terminer
-			/*if (isset($_POST['pseudo']){$pseudo=$_POST["pseudo"]}
-			else{echo 'Veuillez remplir le champ pseudo ';}*/
-			
-
+			if ((isset($_POST['pseudo']))&&(($_POST['pseudo'])!='')){$pseudo=$_POST["pseudo"]}
+			if ((isset($_POST['mdp']))&&(($_POST['mdp'])!='')){$pseudo=$_POST["mdp"]}
+			if ((isset($_POST'introduction']))&&(($_POST['introduction'])!='')){$pseudo=$_POST["introduction"]}
+			if ((isset($_POST['description']))&&(($_POST['description'])!='')){$pseudo=$_POST["description"]}
 
 	$database='linkece';
 	$db_handle=mysqli_connect('localhost', 'root', '');
