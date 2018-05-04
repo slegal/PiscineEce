@@ -70,8 +70,11 @@ require 'fonction_recup-emploi.php';
 		echo $tabemploi[$i][4]; ///NOM
 		echo " ";
 		echo $tabemploi[$i][5];///PRENOM
-		echo" a ajouté une offre d'emploi :" ;
-		 echo $tabemploi[$i][3];?></h2>
+		echo" a ajouté une offre d'emploi : " ;
+		 echo $tabemploi[$i][3];
+		 echo " le ";
+		 echo $tabemploi[$i][2];
+		 ?></h2>
 		<p>  <?php echo $tabemploi[$i][1]?></p>
 		</div>
 		<?php
