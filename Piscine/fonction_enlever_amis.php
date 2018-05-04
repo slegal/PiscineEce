@@ -12,6 +12,8 @@ affiche les experiences de l'utilisateur */
 		
         $data =$_SESSION['Num_utilisateur'];
         $data2=$_SESSION['tmp2'];
+
+        
 		
 		
 		

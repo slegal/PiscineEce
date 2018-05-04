@@ -52,8 +52,8 @@ require 'traitement_eux.php';
 	 </div>
 	 
 	 	<div class="introduction">
-	<form method='POST'>
-	<label> Barre de recherche : <input type="text" name="recherche"> </label> 
+	<form action="Eux.php" method='POST'>
+	<label> Barre de recherche : <input type="text" id="recherche" name="recherche"> </label> 
 	 <input class="button" type="submit" value="rechercher" /> 
 	</form>
 </div>
@@ -64,12 +64,23 @@ require 'traitement_eux.php';
 	 for ($i = 0; $i < sizeof($tabami);$i++) ///NOMBRE DE DIV A FAIRE
 	 {
 		 
-		$_SESSION['tmp2']= $tabami[$i][6];
+		$_SESSION['tmp2']= $tabami[$i][6];///NUM UTILISATEUR
+		//$_SESSION['tmp2']= $tabami[$i][0];///NUM AMI
+		$_SESSION['tmp2nom']= $tabami[$i][1];///NOM
+		$_SESSION['tmp2prenom']= $tabami[$i][2];///PRENOM
+		$_SESSION['tmp2mail']= $tabami[$i][3];///ADRESSE EMAIL
+		$_SESSION['tmp2des']= $tabami[$i][4];///DESCRIPTION
+		$_SESSION['tmp2pp']= $tabami[$i][5];///LIEN PP
+
+	
+	
 	?>
 	  <div class="amis">
 	  		<div class="bin">
 				<a href="fonction_enlever_amis.php"> <img src="bin.jpg" width="50" height="50" alt"bin"></a>
+				<a href="Eux.php">AFFICHER SON PUTAIN DE PROFIL</a>
 	 			</div>
+				 
 	 <h4> <?php 
 	  echo "";
 	  echo $tabami[$i][2] ;///PRENOM;
@@ -84,7 +95,7 @@ require 'traitement_eux.php';
 	 <p><?php echo '<img src="'.$tabami[$i][5].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
 
 	 </div>
-<a href="traitement_eux.php">AFFICHER SON PUTAIN DE PROFIL</a>
+	
 	 </div>
 	 <?php
 	 }
@@ -128,6 +139,7 @@ require 'traitement_eux.php';
 
 	 
 	 </div>
+	<?php echo $_SESSION['tmp2'];?>
 
 	 
 	
