@@ -3,6 +3,7 @@ session_start();
 require 'fonction_recup-amis.php';
 require 'fonction_recup-personne.php';
 
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
@@ -60,8 +61,13 @@ require 'fonction_recup-personne.php';
 
 	 for ($i = 0; $i < sizeof($tabami);$i++) ///NOMBRE DE DIV A FAIRE
 	 {
+		 echo $tabami[$i][6];
+		$_SESSION['tmp2']= $tabami[$i][6];
 	?>
 	  <div class="amis">
+	  		<div class="crayon">
+				<a href="fonction_enlever_amis.php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
+	 			</div>
 	 <h4> <?php  echo "";
 	  echo $tabami[$i][2] ;///PRENOM;
 	 echo " ";
@@ -87,8 +93,13 @@ require 'fonction_recup-personne.php';
 			
 			for ($i = 0; $i < sizeof($tabpersonne);$i++) ///NOMBRE DE DIV A FAIRE
 			{
+			$_SESSION['tmp']= $tabpersonne[$i][4];
+
 				?>
 				<div class="nvamis">
+				<div class="crayon">
+				<a href="fonction_ajout_amis.php"> <img src="plus.png" width="60" height="60" alt"crayon modifier"></a>
+	 			</div>
 				<p>	<?php echo $tabpersonne[$i][2];
 				echo " ";
 				echo $tabpersonne[$i][1];
@@ -97,7 +108,10 @@ require 'fonction_recup-personne.php';
 				<p><?php echo '<img src="'.$tabpersonne[$i][3].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
 				</div>
 				</div>
+		
+				
 				<?php
+				
 			}
 		   ?>
 	 <h4> </h4>

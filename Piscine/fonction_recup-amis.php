@@ -44,6 +44,7 @@ function recupami()
                 $tabami[$taille][3] = $row['Adresse_email']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
                 $tabami[$taille][4] = $row['Description']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
                 $tabami[$taille][5] = $row['Lien_photo_profil']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
+                $tabami[$taille][6] = $row['Num_utilisateur']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
               
                 $taille ++;
 

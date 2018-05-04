@@ -9,7 +9,7 @@ function recupexp($num_u)
 	
     if($db_found) {
 		
-
+$tabstringexpe=array();
 		
 		
 		

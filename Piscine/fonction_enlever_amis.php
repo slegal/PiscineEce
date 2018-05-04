@@ -11,12 +11,13 @@ affiche les experiences de l'utilisateur */
     if($db_found) {
 		
         $data =$_SESSION['Num_utilisateur'];
-        $data2=$_SESSION['tmp'];
+        $data2=$_SESSION['tmp2'];
 		
 		
 		
-        $sql = "INSERT INTO contact (Num_utilisateur,Num_ami) VALUES ($data2,$data)";
-        $sql2 = "INSERT INTO contact (Num_utilisateur,Num_ami) VALUES ($data,$data2)";
+        $sql = "DELETE FROM contact WHERE Num_utilisateur=$data AND Num_ami=$data2";
+        $sql2 = "DELETE FROM contact WHERE Num_utilisateur=$data2 AND Num_ami=$data";
+       
         
         ///REQUETE SQL
         $result = mysqli_query($db_handle, $sql) or die(mysql_error())  ;

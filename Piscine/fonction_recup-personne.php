@@ -77,6 +77,7 @@ function recuppersonne()
                 $tabfinal[$ok][1] = $row['Nom']; ///LA 4eme CASE DU TABLEAU CONTIENT LE NOm
                 $tabfinal[$ok][2] = $row['Prenom']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
                 $tabfinal[$ok][3] = $row['Lien_photo_profil']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
+                $tabfinal[$ok][4] = $row['Num_utilisateur']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
               
                 $ok ++;
 
