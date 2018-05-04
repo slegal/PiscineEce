@@ -119,12 +119,17 @@ require 'fonction_recup-post.php';
 		?>
 		<?php if($tabemploi[$i][8]=="texte")
 		{
-echo $tabemploi[$i][4];
+			echo $tabemploi[$i][4];
 		}
 		?>
 		
 		
 		</p>
+		<?php echo " Nombre de like " ; 
+		echo $tabemploi[$i][2]; ?>
+		
+	
+		<a href="Ajout_like.php"> LIKE</a>
 		</div>
 		<?php
 	 }
@@ -132,7 +137,7 @@ echo $tabemploi[$i][4];
 	 
 	 ?>
 	 
-	 
+
 	 </div>
 	 
 	

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  ven. 04 mai 2018 à 08:46
+-- Généré le :  ven. 04 mai 2018 à 16:30
 -- Version du serveur :  5.7.19
 -- Version de PHP :  5.6.31
 
@@ -132,15 +132,9 @@ CREATE TABLE IF NOT EXISTS `contact` (
 
 INSERT INTO `contact` (`Num_utilisateur`, `Num_ami`) VALUES
 (1, 2),
-(1, 3),
 (2, 1),
 (2, 3),
-(2, 13),
-(3, 1),
-(3, 2),
-(3, 13),
-(13, 2),
-(13, 3);
+(3, 2);
 
 -- --------------------------------------------------------
 
@@ -303,7 +297,7 @@ INSERT INTO `like` (`Num_post`, `Num_utilisateur`) VALUES
 
 DROP TABLE IF EXISTS `post`;
 CREATE TABLE IF NOT EXISTS `post` (
-  `Num_post` int(11) NOT NULL,
+  `Num_post` int(11) NOT NULL AUTO_INCREMENT,
   `Num_utilisateur` int(11) NOT NULL,
   `Nombre_de_like` int(11) NOT NULL,
   `Nombre_de_comment` int(11) NOT NULL,
@@ -313,7 +307,17 @@ CREATE TABLE IF NOT EXISTS `post` (
   `Confidentialite` int(11) NOT NULL,
   `Type_contenu` text NOT NULL,
   PRIMARY KEY (`Num_post`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `post`
+--
+
+INSERT INTO `post` (`Num_post`, `Num_utilisateur`, `Nombre_de_like`, `Nombre_de_comment`, `Contenu`, `Lieu`, `Emotion`, `Confidentialite`, `Type_contenu`) VALUES
+(1, 1, 0, 0, 'Videos/test.mp4', '', 'texte', 0, 'video'),
+(2, 1, 0, 0, 'Videos/pouce.mp4', '', 'texte', 0, 'video'),
+(3, 1, 0, 0, '', '', 'texte', 0, 'texte'),
+(4, 1, 0, 0, 'hgjkrlfm', '', 'texte', 0, 'texte');
 
 -- --------------------------------------------------------
 
@@ -342,10 +346,9 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`Num_utilisateur`, `Nom`, `Prenom`, `Mot_de_passe`, `Adresse_email`, `Pseudo`, `Lien_photo_profil`, `Lien_photo_couverture`, `Description`, `Phrase_d_intro`, `Type_user`) VALUES
-(1, 'Dujet', 'Virgile', 'chien', 'virgile@gmail.net', 'Vivi', 'ppVirgileDujet.jpg', 'pcVirgileDujet.jpg', 'Eleve sérieux et aimable.', 'J\'aime les animaux', 0),
+(1, 'Dujet', 'Virgile', 'chien', 'virgile@gmail.net', 'Vivi', 'ppVirgileDujet.jpg', 'pcVirgileDujet.jpg', 'Eleve serieux et aimable.', 'J\'aime les animaux', 0),
 (2, 'Legal', 'Solenn', 'Concarneau', 'solenn@gmail.fr', 'Furie', 'ppSolennLegall.jpg', 'pcSolennLegal.jpg', 'Eleve relativement charmante', 'Bonjour j\'aime la voile', 0),
-(3, 'Angles', 'Mathilde', 'patate', 'mathilde_angles@gmail.fr', 'matmat', 'ppMathildeAngles.jpg', 'pcMathildeAngles.jpg', 'Eleve vraiment gentille', 'Cherche un emplois', 0),
-(13, 'patata', 'patate', 'p21', 'pat@gmail.com', 'patpat', NULL, '0', ' youu', 'yo', 0);
+(3, 'Angles', 'Mathilde', 'patate', 'mathilde_angles@gmail.fr', 'matmat', 'ppMathildeAngles.jpg', 'pcMathildeAngles.jpg', 'Eleve vraiment gentille', 'Cherche un emplois', 0);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

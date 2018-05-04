@@ -30,7 +30,7 @@ function recuppost()
             $tabemploi[$p][3] = $row['Nombre_de_comment'];
 			$tabemploi[$p][4] = $row['Contenu']; ///LIGNE A L INDICE $P , LA DEUXIEME COLONNE = DATE CREATION
             $tabemploi[$p][5] = $row['Lieu'];
-			   $tabemploi[$p][6] = $row['Emotion'];
+			$tabemploi[$p][6] = $row['Emotion'];
 			$tabemploi[$p][7] = $row['Confidentialite']; ///LIGNE A L INDICE $P , LA DEUXIEME COLONNE = DATE CREATION
             $tabemploi[$p][8] = $row['Type_contenu'];
             
