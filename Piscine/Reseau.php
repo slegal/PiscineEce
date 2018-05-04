@@ -61,7 +61,8 @@ require 'fonction_recup-personne.php';
 
 	 for ($i = 0; $i < sizeof($tabami);$i++) ///NOMBRE DE DIV A FAIRE
 	 {
-		 echo $tabami[$i][6];	$_SESSION['tmp2']= $tabami[$i][6];
+		 
+		$_SESSION['tmp2']= $tabami[$i][6];
 	?>
 	  <div class="amis">
 	  		<div class="crayon">
