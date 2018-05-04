@@ -56,7 +56,24 @@ require 'fonction_recup-post.php';
 	</select>
 			 <textarea id="location" name="location" placeholder="Endoit où vous vous trouvez..." style="height:20px"></textarea>
 	
-		  <textarea id="emotion" name="emotion" placeholder="Comment vous sentez vous?..." style="height:20px"></textarea>
+		   
+		  	<select  id="emotion" name="emotion">
+		 <option value="texte">Content</option>
+    <option value="heureux">Heureux</option>
+    <option value="triste">Triste</option>
+	 <option value="anxieux">Anxieux</option>
+    <option value="appeure">Appeuré</option>
+    <option value="amoureux">Amoureux</option>
+			 <option value="joyeux">Joyeux</option>
+    <option value="fier">Fier</option>
+    <option value="bien">Bien </option>
+	 <option value="merveilleusement_bien">Merveilleusement bien</option>
+    <option value="decu">Deçu</option>
+    <option value="choque">Choque</option>
+	    <option value="radieux">Radieux</option>
+    <option value="colere">En colère</option>
+
+	</select>
         <textarea id="subject" name="subject" placeholder="Ecrivez quelque chose..." style="height:200px; margin-left:60px "></textarea>
 	
 		 <input class="button" type="submit" value="publier" /> 

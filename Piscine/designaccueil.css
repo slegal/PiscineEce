@@ -375,6 +375,20 @@ margin-left:50%;
         margin-top: 0;
     }
 }
+
+ select {
+    width: 65%;
+	padding-bottom:0.5%;
+	padding-top:0.5%;
+
+    margin-left:auto;
+	margin-right: auto;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: vertical;
+	background-color:#E0FFFF;
+	margin-bottom:20px;
+}
  textarea {
     width: 65%;
 
