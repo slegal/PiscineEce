@@ -3,6 +3,8 @@ require 'fonction_ajout-exp.php';
 require 'fonction_ajout-form.php';
 require 'fonction_ajout-comp.php';
 require 'fonction_ajout-interet.php';
+require 'fonction_suppr-expe.php';
+
 
 
 //recuperation de l'utilisateur actuel
@@ -10,10 +12,10 @@ require 'fonction_ajout-interet.php';
 
 ///AJOUT INFO PERSO
 //recuperation des champs de la premiere partie : SI REMPLIS ...a terminer
-			if ((isset($_POST['pseudo']))&&(($_POST['pseudo'])!='')){$pseudo=$_POST["pseudo"]}
-			if ((isset($_POST['mdp']))&&(($_POST['mdp'])!='')){$pseudo=$_POST["mdp"]}
-			if ((isset($_POST'introduction']))&&(($_POST['introduction'])!='')){$pseudo=$_POST["introduction"]}
-			if ((isset($_POST['description']))&&(($_POST['description'])!='')){$pseudo=$_POST["description"]}
+			if ((isset($_POST['pseudo']))&&(($_POST['pseudo'])!='')){$pseudo=$_POST["pseudo"];}
+			if ((isset($_POST['mdp']))&&(($_POST['mdp'])!='')){$mdp=$_POST["mdp"];}
+			if ((isset($_POST['introduction']))&&(($_POST['introduction'])!='')){$intro=$_POST['introduction'];}
+			if ((isset($_POST['description']))&&(($_POST['description'])!='')){$descri=$_POST["description"];}
 
 	$database='linkece';
 	$db_handle=mysqli_connect('localhost', 'root', '');
@@ -22,10 +24,9 @@ require 'fonction_ajout-interet.php';
   
 if($db_found) {
     
-    $sql =  "UPDATE utilisateur SET Pseudo ='".$_POST["pseudo"]."', Mot_de_passe='".$_POST["mdp"]."', Description ='".$_POST["description"]."', Phrase_d_intro ='".$_POST["introduction"]."' WHERE Num_utilisateur ='$num_u' ";
+    $sql =  "UPDATE utilisateur SET Pseudo ='$pseudo', Mot_de_passe='$mdp', Description ='$descri', Phrase_d_intro ='$intro' WHERE Num_utilisateur ='$num_u' ";
     
-   echo $sql;
-    
+      
     $result = mysqli_query($db_handle, $sql);  
     }
     
@@ -51,7 +52,13 @@ if($db_found) {
 			}	
 			}
 			else{echo 'Veuillez remplir tous les champs pour ajouter une experience  ';}	
-
+			
+				if ((isset($_POST['exp-suppr']))&&(($_POST['exp-suppr'])!='aucune')&&(($_POST['exp-suppr'])!=''))
+			{
+				$ent=$_POST["exp-suppr"];
+				supprexp($num_u,$ent);
+			}
+			
 ///AJOUT FORMATION
 //recuperation des champs de la partie formation : SI REMPLIS 
 			if ((isset($_POST['ecole']))&&(isset($_POST['diplome']))&&(isset($_POST['description_formation']))&&(isset($_POST['date_diplome'])))
@@ -71,6 +78,13 @@ if($db_found) {
 			}	
 			}
 			else{echo 'Veuillez remplir tous les champs pour ajouter une experience  ';}	
+			
+				if ((isset($_POST['form-suppr']))&&(($_POST['form-suppr'])!='aucune')&&(($_POST['form-suppr-suppr'])!=''))
+			{
+				$ecole=$_POST["form-suppr"];
+				supprexp($num_u,$ecole);
+			}
+			
 			
 ///AJOUT COMPETENCE
 //recuperation du champ de la partie competence : SI REMPLI 
@@ -96,6 +110,7 @@ if($db_found) {
 				ajoutinteret($num_u,$description_interet);
 			}}
 			
+		
 			
 			
 ?>

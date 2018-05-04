@@ -63,9 +63,18 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	    <div class="col-25">
 	  <label for="input1">Experience  </label> <?php $tabexp=recupexpbis($_SESSION['Num_utilisateur']); ?>
 	  	<img src="plus.png" width="30" height="30" alt"plus">
+		<!--IMAGE DE SUPPRESSION-->
+	
+	<select id="exp-suppr" name="exp-suppr">
+	<option>aucune</option>
+	<?php for($i=0;$i<=sizeof($tabexp)-1;$i++)
+	{?><option id="<?php echo $tabexp[$i][0] ?>"><?php echo $tabexp[$i][1] ?></option><?php }?>
+	</select>
+	
+		
 	  </div>
 	  <div class="col-60">
-       <input type="text" id="entreprise" name="entreprise" value="<?php echo $tabexp[sizeof($tabexp)-1][1] ?>" >
+       <input type="text" id="entreprise" name="entreprise" value="<?php //echo $tabexp[sizeof($tabexp)-1][1] ?>" >
 	  </div>
 	<p>  Entreprise</p> 
  </div>
@@ -73,7 +82,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="text" id="poste" name="poste"  value="<?php echo $tabexp[sizeof($tabexp)-1][4] ?>">
+       <input type="text" id="poste" name="poste"  value="<?php //echo $tabexp[sizeof($tabexp)-1][4] ?>">
    </div>
    <p> Poste occupe</p>
       </div>
@@ -81,7 +90,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="date" id="date debut" name="dD"  value="<?php echo $tabexp[sizeof($tabexp)-1][2] ?>">
+       <input type="date" id="date debut" name="dD"  value="<?php //echo $tabexp[sizeof($tabexp)-1][2] ?>">
    </div>
    <p> Date de début</p>
       </div>
@@ -89,7 +98,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	<div class="col-25">
 	</div>
        <div class="col-60">
-       <input type="date" id="date fin" name="dF"  value="<?php echo $tabexp[sizeof($tabexp)-1][3] ?>">
+       <input type="date" id="date fin" name="dF"  value="<?php //echo $tabexp[sizeof($tabexp)-1][3] ?>">
 	   </div>
 	   <p> Date de fin</p>
 
