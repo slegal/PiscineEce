@@ -9,7 +9,8 @@ function recupami()
     $db_found=mysqli_select_db($db_handle,$database);
     
     $data=$_SESSION['Num_utilisateur'];
-	
+		$tabami=array();
+		
     if($db_found) {
 		
 

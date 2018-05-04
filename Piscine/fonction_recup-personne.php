@@ -14,7 +14,8 @@ function recuppersonne()
 		
 
 		$tabfinal=array();
-		
+		$tabpersonne=array();
+		$tabami=array();
 		
 		$sql = "SELECT* FROM contact WHERE Num_utilisateur != $data AND Num_ami != $data "; ///REQUETE SQL POUR AVOIR LA TABLE EMPLOI OU YA PAS LA PERSONNE CONNECTE
         $result = mysqli_query($db_handle, $sql) or die(mysql_error())  ;
