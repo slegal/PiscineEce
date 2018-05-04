@@ -98,7 +98,7 @@ require 'fonction_recup-post.php';
 		 echo $tabemploi[$i][8];
 		 echo" Se situe à " ;
 		  echo $tabemploi[$i][5];
-		  		 echo", à19:59 se sent  " ;
+		  		 echo", se sent  " ;
 		  echo $tabemploi[$i][6];?></?></h2>
 		<p>  <?php echo $tabemploi[$i][4]?></p>
 		</div>
