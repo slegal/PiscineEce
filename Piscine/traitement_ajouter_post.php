@@ -14,8 +14,9 @@ if($db_found) {
 
    echo $sql;
     
-    $result = mysqli_query($db_handle, $sql) or die(mysql_error());  
+   $result = mysqli_query($db_handle, $sql) or die(mysql_error());  
 		header('Location: Accueil.php');
+		echo $sql;
     }
     
     else { echo "Base de données non trouvée."; }
