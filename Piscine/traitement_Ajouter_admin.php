@@ -12,9 +12,11 @@ if($db_found) {
     
    echo $sql;
     
-    $result = mysqli_query($db_handle, $sql);  
+    $result = mysqli_query($db_handle, $sql); 
+		header('Location: Accueil_admin.php');	
     }
     
     else { echo "Base de données non trouvée."; }
     mysqli_close($db_handle);
+
 ?>
