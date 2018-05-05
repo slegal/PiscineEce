@@ -42,6 +42,8 @@ require 'fonction_recup-form.php';
 	 
 </div>
 <div class="contenu">
+
+	 <div class="photo_couv" style=" background-image: url(<?php echo $_SESSION['Lien_photo_couverture']?>)">
 	  <div class="crayon">
 	<a href="modifier_utilisateur.php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
 	 </div>
@@ -82,7 +84,7 @@ if($_SESSION['Lien_photo_profil']==NULL)
 	 
 	 
 	   <div class="formation">
-	 <h2>Mes Formation</h2>
+	 <h2>Mes Formations</h2>
 
 	 <p> <?php recupform(recupformsuivie($_SESSION['Num_utilisateur']))?></p>
 	 </div>

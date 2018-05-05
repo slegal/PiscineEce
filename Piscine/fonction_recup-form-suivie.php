@@ -6,7 +6,7 @@ function recupformsuivie($num_u)
 	$database='linkece';
 	$db_handle=mysqli_connect('localhost', 'root', '');
 	$db_found=mysqli_select_db($db_handle,$database);
-	
+	$tabnum=array();
     if($db_found) {
 		
    ////// LE TABLEAU RETOURNE
@@ -25,8 +25,6 @@ function recupformsuivie($num_u)
 		}
 		else { echo "Base de données non trouvée."; }
 
-		echo $tabnum[0];
-		echo $tabnum[1];
 
 	mysqli_close($db_handle);
 	return $tabnum;

@@ -4,7 +4,7 @@ Delete dans la BDD l'experience de l'utilisateur */
 function supprexp($num_u, $e)
 {
 	$database='linkece';
-	$db_handle=mysqli_connect('localhost', 'root', '$MP');
+	$db_handle=mysqli_connect('localhost', 'root', '');
 	$db_found=mysqli_select_db($db_handle,$database);
 	
     if($db_found) {	

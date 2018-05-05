@@ -17,7 +17,7 @@ require 'fonction_recup-expbis.php'?>
 <h1>Modifier le profil</h1>
 <div class="introduction">
 <p> Vous pouvez modifier les informations de votre profil sur cette page. Le Nom, le Prénom et l'Email ne sont modifiables que par un administrateur de l'ECE. Vous
-pouvez également ajouter une expérience, une formatoin, une compétence et un centre d'interêt.</p>
+pouvez également ajouter une expérience, une formation, une compétence et un centre d'interêt.</p>
 </div>
 
 <div class="container">
@@ -68,6 +68,15 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
       </div>
       <div class="col-75">
       <input type="file" name="monfichier" /></br>
+      </div>
+    </div>
+	
+	<div class="row">
+      <div class="col-25">
+        <label for="fname">Lien de la photo de couverture</label>
+      </div>
+      <div class="col-75">
+      <input type="file" name="monfichier1" /></br>
       </div>
     </div>
   
