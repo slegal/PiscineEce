@@ -4,10 +4,6 @@
 	background-position:center top;
    
 		background-repeat:no-repeat;
-		
-
-	
-
 	 
     margin-right: auto;
     margin-left: auto;
@@ -26,7 +22,7 @@ nav ul
 	margin-top:25px;
 	background-color: rgba(3, 160, 160,0.5);
 	border: 2px solid black;
-	padding-bottom:10%;
+	padding-bottom:40%;
 	 
     margin-right: auto;
     margin-left: auto;
@@ -38,7 +34,7 @@ nav li
 {
 	margin-top:35px;
 
- margin-left:9%;
+ margin-left:6%;
 
  float:left; /*pour IE*/
 
