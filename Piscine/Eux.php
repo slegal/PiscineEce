@@ -46,7 +46,7 @@ require 'fonction_recup-form.php';
 
 <div class="photo_couv" style=" background-image: url(pc/<?php echo $_SESSION['Lien_photo_couverture2']?>)">
 
-	 <h1> EUX</h1>
+
 	 <?php 
 	 $dataname=$_POST['recherche']; ///TRUC QUI CHOPE LE RECHERCHE
 
@@ -108,7 +108,7 @@ require 'fonction_recup-form.php';
 
 	 
 	 ?>
-
+ <h1><?php echo$_SESSION['Prenom2']; echo" "; echo$_SESSION['Nom2']?></h1>
 	  <div class="introduction">
 	
 	 <p> <?php echo '<p>'.$_SESSION['Phrase2'].'</p>'?> </p>

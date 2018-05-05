@@ -56,7 +56,7 @@ require 'fonction_recup-form.php';
 	  <div class="crayon">
 	<a href="modifier_utilisateur.php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
 	 </div>
-	 <h1> VOUS</h1>
+	 <h1><?php echo$_SESSION['Prenom']; echo" "; echo$_SESSION['Nom']?></h1>
 	 
 
 	  <div class="introduction">
