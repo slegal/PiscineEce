@@ -5,28 +5,30 @@ function supprform($num_u, $e)
 {
 	
 	$database='linkece';
-	$db_handle=mysqli_connect('localhost', 'root', '');
+	$db_handle=mysqli_connect('localhost', 'root', '$MP');
 	$db_found=mysqli_select_db($db_handle,$database);
 	
     if($db_found) {
 		
 		
-		$sql = "INSERT INTO formation (Num_formation, Ecole, Diplome, Date_diplome, Description)
-		VALUES('0','$ecole','$diplome','$date_diplome','$description_formation')"; 
-		
-		echo $sql;
-		mysqli_query($db_handle, $sql) or die(mysql_error())  ;
-		
-		//recuperation num_formation en recuperant la derniere ajoutee
-		$req="SELECT* FROM formation ORDER BY Num_formation DESC LIMIT 1";
-	
-		$result = mysqli_query($db_handle, $req) or die(mysql_error())  ;
+		$sql = "SELECT FROM formation WHERE Ecole='$e'";
+				
+		echo $sql;	
+
+$tabnum=array();		
+		$result = mysqli_query($db_handle, $sql) or die(mysql_error())  ;
 		while($data = mysqli_fetch_assoc($result))
-		{$num_form=$data['Num_formation'];}
+		{$tabnum[]=$data['Num_formation'];}
+	
+			$num_f=$tabnum[0];
+				
+			$req="DELETE FROM formation WHERE Num_formation ='$num_f'";
+			 mysqli_query($db_handle, $req) or die(mysql_error())  ;
 		
-		//REQUETE SQL FORMATION SUIVIE (pourra etre faite par quelqu'un d'autre)
-		$sql0="INSERT INTO formation_suivie (Num_utilisateur, Num_formation)
-		VALUES('$num_u','$num_form')";
+		
+				
+		//REQUETE SQL FORMATION SUIVIE 
+		$sql0="DELETE FROM formation_suivie WHERE Num_utilisateur='$num_u AND Num_formation=$num_f";
 	
 		echo $sql0;
 		mysqli_query($db_handle, $sql0) or die(mysql_error())  ;
