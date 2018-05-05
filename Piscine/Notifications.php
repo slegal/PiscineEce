@@ -52,7 +52,8 @@ require 'fonction_recup-post.php';
 		echo " ";
 		echo $tabemploi[$i][9];///PRENOM
 		echo" a publié un post de type " ;
-		echo $tabemploi[$i][8];
+		echo $tabemploi[$i][8]
+	
 		 ?>
 	 </div>
 	<?php }

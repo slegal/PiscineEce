@@ -75,7 +75,7 @@ require 'fonction_recup-post.php';
     <option value="colere">En colère</option>
 
 	</select>
-        <textarea id="subject" name="subject" placeholder="Ecrivez quelque chose..." style="height:200px; margin-left:60px "></textarea></br>
+        <textarea id="subject" name="subject" placeholder="Ecrivez quelque chose..." style="height:200px "></textarea></br>
 		<input type="file" name="monfichier" /></br>
 		 <input class="button" type="submit" value="publier" /> 
 		</form>

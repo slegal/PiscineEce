@@ -40,7 +40,7 @@ require 'traitement_eux.php';
 	 </header>
 	 
 </div>
-<div class="contenu">
+<div class="contenu" style=" height:1200px;">
 	<div class="bandegauche">
 	 <p></p>
 	 </div> 
@@ -78,7 +78,7 @@ require 'traitement_eux.php';
 	  <div class="amis">
 	  		<div class="bin">
 				<a href="fonction_enlever_amis.php"> <img src="bin.jpg" width="50" height="50" alt"bin"></a>
-				<a href="Eux.php">AFFICHER SON PUTAIN DE PROFIL</a>
+				
 	 			</div>
 				 
 	 <h4> <?php 

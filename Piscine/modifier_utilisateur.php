@@ -64,13 +64,21 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
 	  <label for="input1">Experience  </label> <?php $tabexp=recupexpbis($_SESSION['Num_utilisateur']); ?>
 	  	<img src="plus.png" width="30" height="30" alt"plus">
 		<!--IMAGE DE SUPPRESSION-->
-	
-	<select id="exp-suppr" name="exp-suppr">
+		<div class="row">
+		<div class="col-25">
+		</div>
+		<div class="col-75">
+	<p> Choisir l'expérience à supprimer</p>
+	</div>
+
+		<select id="exp-suppr" name="exp-suppr" style="float:right">
 	<option>aucune</option>
 	<?php for($i=0;$i<=sizeof($tabexp)-1;$i++)
 	{?><option id="<?php echo $tabexp[$i][0] ?>"><?php echo $tabexp[$i][1] ?></option><?php }?>
 	</select>
 	
+	</div>
+
 		
 	  </div>
 	  <div class="col-60">

@@ -43,23 +43,21 @@ require 'traitement_eux.php';
 	 </header>
 	 
 </div>
-<div class="contenu">
+<div class="contenu" style=" height:1200px;">
 	<div class="bandegauche">
 	 <p></p>
 	 </div> 
 	 <h1> MON RESEAU</h1>
 	 
 	 
-	  <div class="introduction">
-<p> Vous trouverez sur cette page tous vos contacts et vos relations ainsi que des propositions de nouvelles connexions</p>
-	 </div>
-	 
 	 	<div class="introduction">
-	<form method='POST'>
-	<label> Barre de recherche : <input type="text" name="recherche"> </label> 
+	<form action="Eux_admin.php" method='POST'>
+	<label> Barre de recherche : <input type="text" id="recherche" name="recherche"> </label> 
 	 <input class="button" type="submit" value="rechercher" /> 
 	</form>
 </div>
+	 
+	
 	  <div class="gauche">
 	 <h3>Mes amis</h3>
 	 <?php $tabami=recupami(); 
@@ -71,7 +69,7 @@ require 'traitement_eux.php';
 	?>
 	  <div class="amis">
 	  		<div class="bin">
-				<a href="fonction_enlever_amis.php"> <img src="bin.jpg" width="50" height="50" alt"bin"></a>
+				<a href="fonction_enlever_amis_admin.php"> <img src="bin.jpg" width="50" height="50" alt"bin"></a>
 	 			</div>
 	 <h4> <?php 
 	  echo "";
@@ -87,7 +85,7 @@ require 'traitement_eux.php';
 	 <p><?php echo '<img src="'.$tabami[$i][5].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
 
 	 </div>
-<a href="traitement_eux.php">AFFICHER SON PUTAIN DE PROFIL</a>
+
 	 </div>
 	 <?php
 	 }
@@ -107,7 +105,7 @@ require 'traitement_eux.php';
 				?>
 				<div class="nvamis">
 				<div class="plus">
-				<a href="fonction_ajout_amis.php"> <img src="plus.png" width="44" height="44" alt"plus"></a>
+				<a href="fonction_ajout_amis_admin.php"> <img src="plus.png" width="44" height="44" alt"plus"></a>
 	 			</div>
 				<p><?php echo $tabpersonne[$i][2];
 				echo " ";

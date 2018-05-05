@@ -404,6 +404,11 @@ margin-left:50%;
         margin-top: 0;
     }
 }
+.bin,.plus{
+	float:right;
+	margin-top:1%;
+	margin-right:1%;
+}
 
  select {
     width: 65%;
