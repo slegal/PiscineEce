@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="carre">
-<h1>Bienvenu sur LINKECE</h1> 
+<h1>Bienvenue sur LINKECE</h1> 
 <p></p>
 <form action="verification_mp_email.php" method="post">
 	<table id ="maTable">

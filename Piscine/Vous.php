@@ -34,6 +34,7 @@ require 'fonction_recup-form.php';
 <li><a href="Reseau.php">Mon réseau</a></li>
   <li><a href="Notifications.php">Mes notifications</a></li>
   <li><a href="Emplois.php">Emplois</a></li>
+	<li><a href="Connexion.php">Se deconnecter</a></li>
  </ul> 
  </nav>
  </div>
@@ -53,7 +54,21 @@ require 'fonction_recup-form.php';
 	 </div>
 	 
 	 <div class="photo_profil">
-	 	 <p> <?php echo '<img src="'.$_SESSION['Lien_photo_profil'].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
+			<p> <?php
+
+if($_SESSION['Lien_photo_profil']!=NULL)
+{
+	echo '<img src="'.$_SESSION['Lien_photo_profil'].'" width="190" height="190" alt"photo_de_profil"/>';
+}
+
+if($_SESSION['Lien_photo_profil']==NULL)
+{
+	echo '<img src="user.png" width="190" height="190" alt"photo_de_profil"/>';
+}
+
+		
+			 
+			 ?></p>
 	 </div>
 			
 	 <div class="description">

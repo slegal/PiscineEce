@@ -34,6 +34,7 @@ require 'traitement_eux.php';
 <li><a href="Reseau.php">Mon réseau</a></li>
   <li><a href="Notifications.php">Mes notifications</a></li>
   <li><a href="Emplois.php">Emplois</a></li>
+  <li><a href="Connexion.php">Se deconnecter</a></li>
  </ul> 
  </nav>
  </div>

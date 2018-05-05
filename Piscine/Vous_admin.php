@@ -39,6 +39,7 @@ require 'fonction_recup-form.php';
   <li><a href="Emplois_admin.php">Emplois</a></li>
     <li><a href="Ajouter_admin.php">Ajouter utilisateur</a></li>
     <li><a href="Supprimer_admin.php">Supprimer utilisateur</a></li>
+		<li><a href="Connexion.php">Se deconnecter</a></li>
  </ul> 
  </nav>
  </div>
