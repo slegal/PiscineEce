@@ -123,7 +123,7 @@ require 'fonction_recup-form.php';
 	 </div>
 	 
 	 <div class="photo_profil">
-	 	 <p> <?php echo '<img src= "'.$_SESSION['Lien_photo_profil2'].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
+	 	 <p> <?php echo '<img src= "pp/'.$_SESSION['Lien_photo_profil2'].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
 	 </div>
 			
 	 <div class="description">
