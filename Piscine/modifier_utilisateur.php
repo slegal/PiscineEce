@@ -1,5 +1,9 @@
 <?php session_start(); 
-require 'fonction_recup-expbis.php'?>
+require 'fonction_recup-expbis.php';
+require 'fonction_recup-formbis.php';
+require 'fonction_recup-form-suivie.php';
+require 'fonction_recup-comp.php';
+require 'fonction_recup-comp-suivie.php';?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -138,7 +142,25 @@ pouvez également ajouter une expérience, une formation, une compétence et un 
 	    <div class="col-25">
 	  <label for="input1">Formation </label>
 	  	  	<img src="plus.png" width="30" height="30" alt"plus">
-	  </div>
+				<!-- SUPPRESSION-->
+						<div class="row">
+						<div class="col-25">
+						</div>
+						<div class="col-75">
+					<p> Choisir la formation à supprimer</p>
+					</div>
+					
+
+
+						<select id="form-suppr" name="form-suppr" style="float:right">
+					<option>aucune</option>
+					<?php for($i=0;$i<sizeof($tabform);$i++)
+					{?><option><?php echo $tabform[$i] ?></option><?php }?>
+					</select>
+					
+					</div>
+
+	 </div>
 	  <div class="col-60">
        <input type="text" id="ecole" name="ecole" >
 	  </div>
@@ -174,6 +196,23 @@ pouvez également ajouter une expérience, une formation, une compétence et un 
 	    <div class="col-25">
 	  <label for="input1">Compétences </label>
 	  	  	<img src="plus.png" width="30" height="30" alt"plus">
+	  <!-- SUPPRESSION-->
+						<div class="row">
+						<div class="col-25">
+						</div>
+						<div class="col-75">
+					<p> Choisir la competence à supprimer</p>
+					</div>
+					
+
+
+						<select id="comp-suppr" name="comp-suppr" style="float:right">
+					<option>aucune</option>
+					<?php for($i=0;$i<sizeof($tabcomp);$i++)
+					{?><option><?php echo $tabcomp[$i] ?></option><?php }?>
+					</select>
+					
+	  
 	  </div>
 	  <div class="col-75">
        <input type="text" id="competence" name="description_competence">

@@ -9,7 +9,7 @@ function recupcomp($arr)
 	
     if($db_found) {
 	
-			
+			$tab=array();
 		for ($i = 0; $i <sizeof($arr);$i++)
 		{
 			$num_c=$arr[$i];		
@@ -19,6 +19,7 @@ function recupcomp($arr)
 			
 			  echo $data['Description'];
 				?> <br> <?php
+				$tab[$i]=$data['Description'];
 			 
 		}  
 			  
@@ -28,7 +29,7 @@ function recupcomp($arr)
 
 	mysqli_close($db_handle);
 	
-		
+	return $tab;	
 			
 }
 

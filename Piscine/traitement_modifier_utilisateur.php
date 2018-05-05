@@ -4,14 +4,15 @@ require 'fonction_ajout-form.php';
 require 'fonction_ajout-comp.php';
 require 'fonction_ajout-interet.php';
 require 'fonction_suppr-expe.php';
-
+require 'fonction_suppr-form.php';
+require 'fonction_suppr-comp.php';
 
 
 //recuperation de l'utilisateur actuel
  $num_u=$_SESSION["Num_utilisateur"]; 
 
 ///AJOUT INFO PERSO
-//recuperation des champs de la premiere partie : SI REMPLIS ...a terminer
+//recuperation des champs de la premiere partie : SI REMPLIS 
 			if ((isset($_POST['pseudo']))&&(($_POST['pseudo'])!='')){$pseudo=$_POST["pseudo"];}
 			if ((isset($_POST['mdp']))&&(($_POST['mdp'])!='')){$mdp=$_POST["mdp"];}
 			if ((isset($_POST['introduction']))&&(($_POST['introduction'])!='')){$intro=$_POST['introduction'];}
@@ -103,8 +104,8 @@ if($db_found) {
 				
 			}	
 			}
-			else{echo 'Veuillez remplir tous les champs pour ajouter une experience  ';}	
-			
+				
+///SUPPRESSION EXPERIENCE	
 				if ((isset($_POST['exp-suppr']))&&(($_POST['exp-suppr'])!='aucune')&&(($_POST['exp-suppr'])!=''))
 			{
 				$ent=$_POST["exp-suppr"];
@@ -129,13 +130,16 @@ if($db_found) {
 				
 			}	
 			}
-			else{echo 'Veuillez remplir tous les champs pour ajouter une experience  ';}	
 			
-				if ((isset($_POST['form-suppr']))&&(($_POST['form-suppr'])!='aucune')&&(($_POST['form-suppr-suppr'])!=''))
+			
+///SUPPRESSION FORMATION
+			
+				if ((isset($_POST['form-suppr']))&&(($_POST['form-suppr'])!='aucune')&&(($_POST['form-suppr'])!=''))
 			{
 				$ecole=$_POST["form-suppr"];
-				supprexp($num_u,$ecole);
+				supprform($num_u,$ecole);
 			}
+			
 			
 			
 ///AJOUT COMPETENCE
@@ -149,6 +153,15 @@ if($db_found) {
 				et génère la requete sql pour l'ajouter dans les tables requises*/
 				ajoutcomp($num_u,$description_competence);
 			}}
+			
+///SUPPRESSION COMPETENCE 
+
+				if ((isset($_POST['comp-suppr']))&&(($_POST['comp-suppr'])!='aucune')&&(($_POST['comp-suppr'])!=''))
+			{
+				$d=$_POST["comp-suppr"];
+				supprcomp($num_u,$d);
+			}
+
 
 ///AJOUT INTERET
 //recuperation du champ de la partie interet : SI REMPLI 

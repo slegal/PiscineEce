@@ -2,7 +2,7 @@
 
 /* Ci-dessous, la fonction qui prend en parametre le Num_utilisateur et l'ecole
 suppr dans la BDD la liaison formation utilisateur*/
-function supprform($num_u, $e)
+function supprcomp($num_u, $d)
 {
 	
 	$database='linkece';
@@ -12,26 +12,25 @@ function supprform($num_u, $e)
     if($db_found) {
 		
 		
-		$sql = "SELECT* FROM formation WHERE Ecole='$e'";
+		$sql = "SELECT* FROM competence WHERE Description='$d'";
 				
-		echo $sql;	
-
+	
 		
 		$result = mysqli_query($db_handle, $sql) or die(mysql_error())  ;
 		while($data = mysqli_fetch_assoc($result))
-		{$num_f=$data['Num_formation'];}
+		{$num_c=$data['Num_competence'];}
 	
-	//REQUETE SQL FORMATION SUIVIE 	
-	$sql0="DELETE FROM formation_suivie WHERE Num_utilisateur='$num_u' AND Num_formation='$num_f'";
+	//REQUETE SQL COMPETENCE SUIVIE 	
+	$sql0="DELETE FROM competence_suivie WHERE Num_utilisateur='$num_u' AND Num_competence='$num_c'";
 	
-		echo $sql0;
+		
 		mysqli_query($db_handle, $sql0) or die(mysql_error())  ;
 				
-   //REQUETE SQL FORMATION (si il est le seul utilisateur à la suvre)
+   //REQUETE SQL COMPETENCE (si il est le seul utilisateur à la suvre)
    
-			$req="SELECT* FROM formation WHERE Num_formation ='$num_f'";
+			$req="SELECT* FROM competence WHERE Num_competence ='$num_c'";
 			 mysqli_query($db_handle, $req) or die(mysql_error())  ;
-			 echo $req;
+			
 
 			 $p=0;
 			 foreach  ($db_handle->query($req) as $row) { $p++;}
@@ -39,7 +38,7 @@ function supprform($num_u, $e)
 			 if($p<=1)
 			 {
 				
-				 $sqlb="DELETE FROM formation WHERE Num_formation='$num_f'";
+				 $sqlb="DELETE FROM competence WHERE Num_formation='$num_c'";
 				  mysqli_query($db_handle, $sqlb) or die(mysql_error())  ;
 			 }
 			 
@@ -53,6 +52,8 @@ function supprform($num_u, $e)
 		
 			
         }
+		
+		header('Location: Vous.php');
 				
 
 ?>
