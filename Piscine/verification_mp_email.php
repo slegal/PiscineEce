@@ -37,8 +37,17 @@ $db_found=mysqli_select_db($db_handle,$database);
 			$_SESSION['Phrase_d_intro']=$data['Phrase_d_intro'];
             $_SESSION['Type_user']=$data['Type_user'];
 			
-			
-			header('Location: Vous.php');
+			if($data['Type_user']==0)
+			{
+				header('Location: Vous.php');
+			}
+
+					
+			if($data['Type_user']==1)
+			{
+				header('Location: Vous_admin.php');
+			}
+		
 			
 			
 		

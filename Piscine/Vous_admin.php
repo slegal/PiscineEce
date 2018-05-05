@@ -19,7 +19,7 @@ require 'fonction_recup-form.php';
 <script type="text/javascript" src="fichier.js"></script>
 <?php
 //acces au num de session pour savoir qui est connecte
-echo 'num connecte '; echo $_SESSION['Lien_photo_profil'];      
+    
 ?>		
 </head>
 <body>
