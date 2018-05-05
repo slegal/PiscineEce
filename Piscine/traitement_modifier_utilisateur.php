@@ -37,11 +37,46 @@ require 'fonction_suppr-expe.php';
 			
 				 }
 		}
+
+	 ////////// VU SUR OPENCLASSROOM
+				$nom_fichier1=basename($_FILES['monfichier1']['name']);
+				echo $nom_fichier1;
+
+				if (isset($_FILES['monfichier1']) AND $_FILES['monfichier1']['error'] == 0)
+				{
+						 // Testons si le fichier n'est pas trop gros
+						 if ($_FILES['monfichier1']['size'] <= 1000000)
+						 {
+							// Testons si l'extension est autorisée
+							$infosfichier = pathinfo($_FILES['monfichier1']['name']);
+							$extension_upload = $infosfichier['extension'];
+							$extensions_autorisees = array('jpg', 'jpeg', 'gif', 'png','PNG','JPG','MP4','mp4');
+					
+						 }
+				}
  
   
 if($db_found) {
+	if($nom_fichier!="" && $nom_fichier1=="")///SI PP CHOISIT PC VIDE
+	{
+		$sql =  "UPDATE utilisateur SET Pseudo ='$pseudo', Mot_de_passe='$mdp', Description ='$descri', Phrase_d_intro ='$intro', Lien_photo_profil ='$nom_fichier' WHERE Num_utilisateur ='$num_u' ";
+	}
+	if($nom_fichier=="" && $nom_fichier1!="")///SI PC CHOISIT PP VIDE
+	{
+		$sql =  "UPDATE utilisateur SET Pseudo ='$pseudo', Mot_de_passe='$mdp', Description ='$descri', Phrase_d_intro ='$intro', Lien_photo_couverture ='$nom_fichier1' WHERE Num_utilisateur ='$num_u' ";
+	}
+
+	if($nom_fichier!="" && $nom_fichier1!="")///SI PP ET PC CHOISIT CHOISIT
+	{
+		$sql =  "UPDATE utilisateur SET Pseudo ='$pseudo', Mot_de_passe='$mdp', Description ='$descri', Phrase_d_intro ='$intro', Lien_photo_profil ='$nom_fichier' , Lien_photo_couverture ='$nom_fichier1'WHERE Num_utilisateur ='$num_u' ";
+	}
+
+	if($nom_fichier=="" && $nom_fichier1=="") ///POUR PAS EFFACER LA PP  ET PC SI ON CHOISIT R
+	{
+		$sql =  "UPDATE utilisateur SET Pseudo ='$pseudo', Mot_de_passe='$mdp', Description ='$descri', Phrase_d_intro ='$intro' WHERE Num_utilisateur ='$num_u' ";
+	}
     
-    $sql =  "UPDATE utilisateur SET Pseudo ='$pseudo', Mot_de_passe='$mdp', Description ='$descri', Phrase_d_intro ='$intro', Lien_photo_profil ='$nom_fichier' WHERE Num_utilisateur ='$num_u' ";
+   
     
       
     $result = mysqli_query($db_handle, $sql);  
@@ -128,6 +163,6 @@ if($db_found) {
 			}}
 			
 		
-			header('Location: Traitementbis.php');
+			header('Location: Connexion.php');
 			
 ?>

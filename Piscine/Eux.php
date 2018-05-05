@@ -44,7 +44,7 @@ require 'fonction_recup-form.php';
 </div>
 <div class="contenu">
 
-
+<div class="photo_couv" style=" background-image: url(pc/<?php echo $_SESSION['Lien_photo_couverture2']?>)">
 
 	 <h1> EUX</h1>
 	 <?php 
@@ -77,6 +77,7 @@ require 'fonction_recup-form.php';
 					 $tabeux[7] = $row['Pseudo'];
 					 $tabeux[8] = $row['Phrase_d_intro'];
 					 $tabeux[9] = $row['Mot_de_passe'];
+					 $tabeux[10] = $row['Lien_photo_couverture'];
 
 					 $_SESSION['Nom2']=$tabeux[0];
 					 $_SESSION['Prenom2']=$tabeux[1];
@@ -88,6 +89,7 @@ require 'fonction_recup-form.php';
 					 $_SESSION['Pseudo2']=$tabeux[7];
 					 $_SESSION['Phrase_d_intro2']=$tabeux[8];
 					 $_SESSION['Mot_de_passe2']=$tabeux[9];
+					 $_SESSION['Lien_photo_couverture2']=$tabeux[10];
 					
 
 				   
@@ -113,7 +115,7 @@ require 'fonction_recup-form.php';
 	 </div>
 	 
 	 <div class="photo_profil">
-	 	 <p> <?php echo '<img src= "'.$_SESSION['Lien_photo_profil2'].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
+	 	 <p> <?php echo '<img src= "pp/'.$_SESSION['Lien_photo_profil2'].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
 	 </div>
 			
 	 <div class="description">

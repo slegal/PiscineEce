@@ -43,8 +43,8 @@ require 'fonction_recup-form.php';
 </div>
 <div class="contenu">
 
-	 <div class="photo_couv" style=" background-image: url(<?php echo $_SESSION['Lien_photo_couverture']?>)">
-	  <div class="crayon">
+	<div class="photo_couv" style=" background-image: url(pc/<?php echo $_SESSION['Lien_photo_couverture']?>)">
+	<div class="crayon">
 	<a href="modifier_utilisateur.php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
 	 </div>
 	 <h1> VOUS</h1>
@@ -62,7 +62,7 @@ if($_SESSION['Lien_photo_profil']!=NULL)
 {
 	echo '<img src="pp/'.$_SESSION['Lien_photo_profil'].'" width="190" height="190" alt"photo_de_profil"/>';
 }
-
+///SI PHOTO INEXISTANTE
 if($_SESSION['Lien_photo_profil']==NULL)
 {
 	echo '<img src="user.png" width="190" height="190" alt"photo_de_profil"/>';

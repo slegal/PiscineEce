@@ -50,7 +50,7 @@ require 'fonction_recup-form.php';
 <div class="contenu">
  
 
-	 <div class="photo_couv" style=" background-image: url(<?php echo $_SESSION['Lien_photo_couverture']?>)">
+	 <div class="photo_couv" style=" background-image: url(pc/<?php echo $_SESSION['Lien_photo_couverture']?>)">
 
 	
 	  <div class="crayon">

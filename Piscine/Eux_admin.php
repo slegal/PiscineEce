@@ -83,6 +83,7 @@ require 'fonction_recup-form.php';
 					 $tabeux[7] = $row['Pseudo'];
 					 $tabeux[8] = $row['Phrase_d_intro'];
 					 $tabeux[9] = $row['Mot_de_passe'];
+					 $tabeux[10] = $row['Lien_photo_couverture'];
 
 					 $_SESSION['Nom2']=$tabeux[0];
 					 $_SESSION['Prenom2']=$tabeux[1];
@@ -94,6 +95,7 @@ require 'fonction_recup-form.php';
 					 $_SESSION['Pseudo2']=$tabeux[7];
 					 $_SESSION['Phrase_d_intro2']=$tabeux[8];
 					 $_SESSION['Mot_de_passe2']=$tabeux[9];
+					 $_SESSION['Lien_photo_couverture2']=$tabeux[10];
 					
 
 				   
@@ -112,6 +114,8 @@ require 'fonction_recup-form.php';
 
 	 
 	 ?>
+
+	 <div class="photo_couv" style=" background-image: url(pc/<?php echo $_SESSION['Lien_photo_couverture2']?>)">
 
 	 	  <div class="crayon">
 	<a href="modifier_eux.php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>

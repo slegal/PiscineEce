@@ -69,6 +69,15 @@ require 'fonction_recup-expbis.php'?>
       <input type="file" name="monfichier" /></br>
       </div>
     </div>
+
+         <div class="row">
+      <div class="col-25">
+        <label for="fname">Lien de la photo de couverture</label>
+      </div>
+      <div class="col-75">
+      <input type="file" name="monfichier1" /></br>
+      </div>
+    </div>
   
 	 <div class="row">
 	    <div class="col-25">
