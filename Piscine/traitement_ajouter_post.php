@@ -4,6 +4,8 @@
 	$db_handle=mysqli_connect('localhost', 'root', '');
     $db_found=mysqli_select_db($db_handle,$database);
     
+
+    ////////// VU SUR OPENCLASSROOM
     $nom_fichier=basename($_FILES['monfichier']['name']);
 
     if (isset($_FILES['monfichier']) AND $_FILES['monfichier']['error'] == 0)
@@ -22,6 +24,7 @@
                 }
              }
     }
+    ////////////////////////////////////////////////////////////////////////////////////////////::
 
 if($db_found) {
 	
@@ -41,11 +44,11 @@ if($_POST['type']=="video"){ ///SI TYPE PHOTO ON MET LE NOM DU FICHIER
 
   
 
-   echo $sql;
+   
     
    $result = mysqli_query($db_handle, $sql) or die(mysql_error());  
 		header('Location: Accueil.php');
-		echo $sql;
+		
     }
     
     else { echo "Base de données non trouvée."; }

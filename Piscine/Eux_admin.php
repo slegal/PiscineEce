@@ -80,6 +80,9 @@ require 'fonction_recup-form.php';
 					 $tabeux[4] = $row['Lien_photo_profil']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
 					 $tabeux[5] = $row['Num_utilisateur']; ///LA 5 CASE DU TABLEAU CONTIENT LE PRENOM
 					 $tabeux[6] = $row['Phrase_d_intro'];
+					 $tabeux[7] = $row['Pseudo'];
+					 $tabeux[8] = $row['Phrase_d_intro'];
+					 $tabeux[9] = $row['Mot_de_passe'];
 
 					 $_SESSION['Nom2']=$tabeux[0];
 					 $_SESSION['Prenom2']=$tabeux[1];
@@ -88,6 +91,9 @@ require 'fonction_recup-form.php';
 					 $_SESSION['Lien_photo_profil2']=$tabeux[4];
 					 $_SESSION['Num_utilisateur2']=$tabeux[5];
 					 $_SESSION['Phrase2']=$tabeux[6];
+					 $_SESSION['Pseudo2']=$tabeux[7];
+					 $_SESSION['Phrase_d_intro2']=$tabeux[8];
+					 $_SESSION['Mot_de_passe2']=$tabeux[9];
 					
 
 				   
@@ -106,6 +112,10 @@ require 'fonction_recup-form.php';
 
 	 
 	 ?>
+
+	 	  <div class="crayon">
+	<a href="modifier_eux.php"> <img src="crayon.png" width="60" height="60" alt"crayon modifier"></a>
+	 </div>
 
 	  <div class="introduction">
 	

@@ -83,7 +83,7 @@ require 'traitement_eux.php';
 	  ?>	 </h4>
 	 <p><?php $tabami[$i][4]?></p>
 	 <div class="photo">
-	 <p><?php echo '<img src="'.$tabami[$i][5].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
+	 <p><?php echo '<img src="pp/'.$tabami[$i][5].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
 
 	 </div>
 
@@ -113,7 +113,7 @@ require 'traitement_eux.php';
 				echo $tabpersonne[$i][1];
 				?></p>
 			 	<div class="photo">
-				<p><?php echo '<img src="'.$tabpersonne[$i][3].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
+				<p><?php echo '<img src="pp/'.$tabpersonne[$i][3].'" width="190" height="190" alt"photo_de_profil"/>'?></p>
 				</div>
 				</div>
 		

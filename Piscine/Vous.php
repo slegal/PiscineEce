@@ -58,7 +58,7 @@ require 'fonction_recup-form.php';
 
 if($_SESSION['Lien_photo_profil']!=NULL)
 {
-	echo '<img src="'.$_SESSION['Lien_photo_profil'].'" width="190" height="190" alt"photo_de_profil"/>';
+	echo '<img src="pp/'.$_SESSION['Lien_photo_profil'].'" width="190" height="190" alt"photo_de_profil"/>';
 }
 
 if($_SESSION['Lien_photo_profil']==NULL)

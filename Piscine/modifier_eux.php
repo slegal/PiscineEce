@@ -16,18 +16,17 @@ require 'fonction_recup-expbis.php'?>
 <body>
 <h1>Modifier le profil</h1>
 <div class="introduction">
-<p> Vous pouvez modifier les informations de votre profil sur cette page. Le Nom, le Prénom et l'Email ne sont modifiables que par un administrateur de l'ECE. Vous
-pouvez également ajouter une expérience, une formatoin, une compétence et un centre d'interêt.</p>
+<p> Vous pouvez modifier les informations du profil sur cette page.</p>
 </div>
 
 <div class="container">
-  <form action="traitement_modifier_utilisateur.php" method="post" enctype="multipart/form-data">
+  <form action="traitement_modifier_eux.php" method="post" enctype="multipart/form-data">
    <div class="row">
       <div class="col-25">
         <label for="fname">Pseudo</label>
       </div>
       <div class="col-75">
-     <input type="text" id="pseudo" name="pseudo" value="<?php echo $_SESSION['Pseudo']?>" >
+     <input type="text" id="pseudo" name="pseudo" value="<?php echo $_SESSION['Pseudo2']?>" >
       </div>
     </div>
 	
@@ -37,7 +36,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
         <label for="fname">Mot de Passe</label>
       </div>
       <div class="col-75">
-     <input type="password" id="mdp" name="mdp" value="<?php echo $_SESSION['Mot_de_passe']?>" >
+     <input type="password" id="mdp" name="mdp" value="<?php echo $_SESSION['Mot_de_passe2']?>" >
       </div>
     </div>
 	
@@ -46,7 +45,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
         <label for="fname">Phrase d'introduction</label>
       </div>
       <div class="col-75">
-     <input type="text" id="introduction" name="introduction" value="<?php echo $_SESSION['Phrase_d_intro']?>" >
+     <input type="text" id="introduction" name="introduction" value="<?php echo $_SESSION['Phrase_d_intro2']?>" >
       </div>
     </div>
 
@@ -57,7 +56,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
         <label for="subject">Description</label>
       </div>
       <div class="col-75">
-        <textarea id="descrpition" name="description" value=""  style="height:200px"> <?php echo $_SESSION['Description']?></textarea>
+        <textarea id="descrpition" name="description" value=""  style="height:200px"> <?php echo $_SESSION['Description2']?></textarea>
  
       </div>
     </div>
@@ -73,7 +72,7 @@ pouvez également ajouter une expérience, une formatoin, une compétence et un 
   
 	 <div class="row">
 	    <div class="col-25">
-	  <label for="input1">Experience  </label> <?php $tabexp=recupexpbis($_SESSION['Num_utilisateur']); ?>
+	  <label for="input1">Experience  </label> <?php $tabexp=recupexpbis($_SESSION['Num_utilisateur2']); ?>
 	  	<img src="plus.png" width="30" height="30" alt"plus">
 		<!--IMAGE DE SUPPRESSION-->
 		<div class="row">

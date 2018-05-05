@@ -8,7 +8,7 @@ require 'fonction_suppr-expe.php';
 
 
 //recuperation de l'utilisateur actuel
- $num_u=$_SESSION["Num_utilisateur"]; 
+ $num_u=$_SESSION["Num_utilisateur2"]; 
 
 ///AJOUT INFO PERSO
 //recuperation des champs de la premiere partie : SI REMPLIS ...a terminer
