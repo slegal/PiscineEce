@@ -110,10 +110,10 @@ require 'fonction_recup-post.php';
 		if($tabemploi[$i][8]=="video")
 		{
 			?>
-	<video width="320" height="240" controls autoplay>
+	<video width="320" height="240" controls >
   
   <source src="<?php echo $tabemploi[$i][4] ?>" type="video/mp4">
-  Sorry, your browser doesn't support the video element.
+
 </video>
 <?php
 		}
