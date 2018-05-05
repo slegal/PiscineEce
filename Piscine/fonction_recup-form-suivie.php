@@ -18,11 +18,15 @@ function recupformsuivie($num_u)
 		///REMPLISSAGE
 		foreach  ($db_handle->query($sql) as $row) {
 		$tabnum[] = $row['Num_formation'];
+		
 													}
 													
 		
 		}
-    else { echo "Base de données non trouvée."; }
+		else { echo "Base de données non trouvée."; }
+
+		echo $tabnum[0];
+		echo $tabnum[1];
 
 	mysqli_close($db_handle);
 	return $tabnum;

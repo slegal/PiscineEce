@@ -1,0 +1,3 @@
+www.openclassroom.fr 
+www.W3school.com POUR CSS ET HTML
+www.developper.net	POUR CERTAINES QUESTIONS DE DEBUGAGE ET D UTILISATION DU PHP

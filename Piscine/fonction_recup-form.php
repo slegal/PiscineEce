@@ -34,16 +34,17 @@ function recupform($arr)
 			$a .= $row['Description'];
 			
 			//echo $a;
-			$tabstring[$p] = $a; ///TABLEAU AYANT AUTANT DE LIGNE ET CONTENANT LES LES PHRASES A AFFICHER
+			$tabstring[$i] = $a; ///TABLEAU AYANT AUTANT DE LIGNE ET CONTENANT LES LES PHRASES A AFFICHER
+
+			echo $tabstring[$i];
+			
+
+			
 			$p++; ///UNE FOIS LA LIGNE FINIE ON PASSE A LA LIGNE SUIVANTE EN INCREMENTAN
 			}
 			?><ul> <?php			
 			///AFFICHAGE
-				for ($i = 0; $i <sizeof($tabstring);$i++)
-				{?><li><?php	
-					echo $tabstring[$i];
-			     ?></li><?php
-				}
+		
 				
 			
 		}  
