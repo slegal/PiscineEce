@@ -140,7 +140,7 @@ pouvez également ajouter une expérience, une formation, une compétence et un 
 
 	 <div class="row">
 	    <div class="col-25">
-	  <label for="input1">Formation </label>
+	  <label for="input1">Formation </label>  <?php $tabform=recupformbis($_SESSION['Num_utilisateur']); ?>
 	  	  	<img src="plus.png" width="30" height="30" alt"plus">
 				<!-- SUPPRESSION-->
 						<div class="row">
@@ -194,7 +194,7 @@ pouvez également ajouter une expérience, une formation, une compétence et un 
 
  <div class="row">
 	    <div class="col-25">
-	  <label for="input1">Compétences </label>
+	  <label for="input1">Compétences </label>  <?php $tabcomp=recupcomp($_SESSION['Num_utilisateur']); ?>
 	  	  	<img src="plus.png" width="30" height="30" alt"plus">
 	  <!-- SUPPRESSION-->
 						<div class="row">

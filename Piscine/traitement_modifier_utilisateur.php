@@ -18,6 +18,8 @@ require 'fonction_suppr-comp.php';
 			if ((isset($_POST['introduction']))&&(($_POST['introduction'])!='')){$intro=$_POST['introduction'];}
 			if ((isset($_POST['description']))&&(($_POST['description'])!='')){$descri=$_POST["description"];}
 
+
+		
 	$database='linkece';
 	$db_handle=mysqli_connect('localhost', 'root', '');
 	$db_found=mysqli_select_db($db_handle,$database);
@@ -80,7 +82,9 @@ if($db_found) {
    
     
       
-    $result = mysqli_query($db_handle, $sql);  
+	$result = mysqli_query($db_handle, $sql);  
+	
+	header('Location: Connexion.php');
     }
     
     else { echo "Base de données non trouvée."; }
@@ -176,6 +180,6 @@ if($db_found) {
 			}}
 			
 		
-			header('Location: Connexion.php');
+			header('Location: Vous.php');			
 			
 ?>
